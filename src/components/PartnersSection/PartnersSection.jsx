@@ -2,18 +2,26 @@ import React from 'react';
 import { Box, Container, Grid, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import SpotifyLogo from '../../assets/sinfcor/image 14.png';
+import SpotifyLogo from '../../assets/sinfcor/image 4.png';
+import GoogleLogo from '../../assets/sinfcor/image 5.png';
+import StripeLogo from '../../assets/sinfcor/image 14.png';
+import YoutubeLogo from '../../assets/sinfcor/image 15.png';
+import MicrosoftLogo from '../../assets/sinfcor/image 16.png';
+import MediumLogo from '../../assets/sinfcor/image 17.png';
+import ZoomLogo from '../../assets/sinfcor/image 18.png';
+import UberLogo from '../../assets/sinfcor/image 19.png';
+import GrabLogo from '../../assets/sinfcor/image 20.png';
 
 const partners = [
     { src: SpotifyLogo, alt: 'Spotify' },
-    { src: SpotifyLogo, alt: 'Google' },
-    { src: SpotifyLogo, alt: 'Stripe' },
-    { src: SpotifyLogo, alt: 'Youtube' },
-    { src: SpotifyLogo, alt: 'Microsoft' },
-    { src: SpotifyLogo, alt: 'Medium' },
-    { src: SpotifyLogo, alt: 'Zoom' },
-    { src: SpotifyLogo, alt: 'Uber' },
-    { src: SpotifyLogo, alt: 'Grab' },
+    { src: GoogleLogo, alt: 'Google' },
+    { src: StripeLogo, alt: 'Stripe' },
+    { src: YoutubeLogo, alt: 'Youtube' },
+    { src: MicrosoftLogo, alt: 'Microsoft' },
+    { src: MediumLogo, alt: 'Medium' },
+    { src: ZoomLogo, alt: 'Zoom' },
+    { src: UberLogo, alt: 'Uber' },
+    { src: GrabLogo, alt: 'Grab' },
 ];
 
 const PartnersSection = () => {
