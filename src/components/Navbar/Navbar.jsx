@@ -37,7 +37,7 @@ const Navbar = () => {
                 <img src={LogoIF} width={200} alt="Ironhack logo" />
                 <Box sx={{ flexGrow: 2 }} />
                 <Box sx={{ display: 'flex', flexGrow: 1, justifyContent: 'center' }}>
-                    <ul style={{ display: 'flex', listStyle: 'none', gap: '1rem' }}>
+                    <ul style={{ display: 'flex', listStyle: 'none', gap: '1rem', color: '#ffffff' }}>
                         <li>
                             <Button color="inherit">Home</Button>
                         </li>
@@ -49,7 +49,11 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </Box>
-                <Typography variant="h6" component="div">
+                <Typography variant="h6" component="div" sx={{
+                    fontWeight: 'bold',
+                    color: '#ffffff',
+                    fontSize: '1.5rem',
+                }}>
                     SINFCOR
                 </Typography>
             </Container>

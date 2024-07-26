@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { Box, Typography, Paper, Grid } from '@mui/material';
 
 const Cronometro = ({ targetDate }) => {
   const calculateTimeLeft = () => {
@@ -7,10 +9,10 @@ const Cronometro = ({ targetDate }) => {
 
     if (difference > 0) {
       timeLeft = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60)
+        D: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        H: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        M: Math.floor((difference / 1000 / 60) % 60),
+        S: Math.floor((difference / 1000) % 60)
       };
     }
 
@@ -35,9 +37,9 @@ const Cronometro = ({ targetDate }) => {
     }
 
     timerComponents.push(
-      <span key={interval}>
+      <Typography key={interval} variant="h6" component="span">
         {timeLeft[interval]} {interval}{" "}
-      </span>
+      </Typography>
     );
   });
 
@@ -47,15 +49,35 @@ const Cronometro = ({ targetDate }) => {
   };
 
   return (
-    <div className="cronometro">
-      <div className="target-date">
-        Evento começa em: {formatTargetDate(targetDate)}
-      </div>
-      <div className="time">
-        {timerComponents.length ? timerComponents : <span>Tempo esgotado!</span>}
-      </div>
-    </div>
+    <Paper sx={{ padding: '20px', backgroundColor: '#242565', color: '#fff', borderRadius: '20px' }}>
+      <Grid container spacing={3}>
+        <Grid item xs={12} sm={4}>
+          <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', borderBottom: '2px solid #3d3e7c', height: '120px' }}>
+            <Typography variant="h6" component="span">Tempo</Typography>
+            <Typography variant="h4" component="span">
+              {timerComponents.length ? timerComponents : <span>Tempo esgotado!</span>}
+            </Typography>
+          </Box>
+        </Grid>
+        <Grid item xs={12} sm={4}>
+          <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', borderBottom: '2px solid #3d3e7c', height: '120px' }}>
+            <Typography variant="h6" component="span">Onde</Typography>
+            <Typography variant="h6" component="span">IFPI - Corrente</Typography>
+          </Box>
+        </Grid>
+        <Grid item xs={12} sm={4}>
+          <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', borderBottom: '2px solid #3d3e7c', height: '120px' }}>
+            <Typography variant="h6" component="span">Data</Typography>
+            <Typography variant="h6" component="span">15 a 17 Agosto</Typography>
+          </Box>
+        </Grid>
+      </Grid>
+    </Paper>
   );
+};
+
+Cronometro.propTypes = {
+  targetDate: PropTypes.string.isRequired,
 };
 
 export default Cronometro;

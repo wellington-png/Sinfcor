@@ -1,7 +1,7 @@
 import React from 'react';
 import IconFacebook from '../../assets/icons/facebook.svg'
 import IconTwitter from '../../assets/icons/twitter.svg'
-import { Box, Container } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import Divider from '@mui/material/Divider';
 
 
@@ -20,8 +20,8 @@ export const Footer = () => {
             textAlign: 'center',
             rowGap: '1rem'
           }}>
-          <h3>SINFCOR - IFPI</h3>
-          <p>Eventick is a global self-service ticketing platform for live experiences that allows anyone to create, share, find and attend events that fuel their passions and enrich their lives.</p>
+          <Typography>SINFCOR - IFPI</Typography>
+          <Typography>Eventick is a global self-service ticketing platform for live experiences that allows anyone to create, share, find and attend events that fuel their passions and enrich their lives.</Typography>
           <Box sx={{ display: 'flex', columnGap: '1rem' }}>
             <a href='https://www.facebook.com/'>
               <img src={IconFacebook} alt='Facebook' />
@@ -33,7 +33,7 @@ export const Footer = () => {
         </Container>
         <Divider variant="middle" sx={{ borderColor: '#4C4D8B' }} />
         <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop:'2rem' }}>
-          <p>© 2024 SINFCOR. All rights reserved.</p>
+          <Typography>© 2024 SINFCOR. All rights reserved.</Typography>
         </Box>
       </Container>
     </Box>
