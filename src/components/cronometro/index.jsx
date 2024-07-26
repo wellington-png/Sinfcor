@@ -2,6 +2,16 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Box, Typography, Paper, Grid } from '@mui/material';
 
+
+const stylesBox = {
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  borderBottom: '2px solid #3d3e7c',
+  height: '120px'
+}
+
 const Cronometro = ({ targetDate }) => {
   const calculateTimeLeft = () => {
     const difference = +new Date(targetDate) - +new Date();
@@ -52,7 +62,7 @@ const Cronometro = ({ targetDate }) => {
     <Paper sx={{ padding: '20px', backgroundColor: '#242565', color: '#fff', borderRadius: '20px' }}>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={4}>
-          <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', borderBottom: '2px solid #3d3e7c', height: '120px' }}>
+          <Box sx={stylesBox}>
             <Typography variant="h6" component="span">Tempo</Typography>
             <Typography variant="h4" component="span">
               {timerComponents.length ? timerComponents : <span>Tempo esgotado!</span>}
@@ -60,13 +70,13 @@ const Cronometro = ({ targetDate }) => {
           </Box>
         </Grid>
         <Grid item xs={12} sm={4}>
-          <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', borderBottom: '2px solid #3d3e7c', height: '120px' }}>
+          <Box sx={stylesBox}>
             <Typography variant="h6" component="span">Onde</Typography>
             <Typography variant="h6" component="span">IFPI - Corrente</Typography>
           </Box>
         </Grid>
         <Grid item xs={12} sm={4}>
-          <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', borderBottom: '2px solid #3d3e7c', height: '120px' }}>
+          <Box sx={{...stylesBox, borderBottom: { xs: "none", sm: "2px solid #3d3e7c" }}}>
             <Typography variant="h6" component="span">Data</Typography>
             <Typography variant="h6" component="span">15 a 17 Agosto</Typography>
           </Box>
