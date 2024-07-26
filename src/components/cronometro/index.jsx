@@ -53,10 +53,6 @@ const Cronometro = ({ targetDate }) => {
     );
   });
 
-  const formatTargetDate = (date) => {
-    const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
-    return new Date(date).toLocaleDateString('pt-BR', options);
-  };
 
   return (
     <Paper sx={{ padding: '20px', backgroundColor: '#242565', color: '#fff', borderRadius: '20px' }}>

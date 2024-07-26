@@ -1,14 +1,8 @@
 import React from 'react';
 import { Box, Container, Grid, Typography } from '@mui/material';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import SpotifyLogo from '../../assets/sinfcor/image 14.png';
-// import GoogleLogo from '../../assets/google-logo.png';
-// import StripeLogo from '../../assets/stripe-logo.png';
-// import YoutubeLogo from '../../assets/youtube-logo.png';
-// import MicrosoftLogo from '../../assets/microsoft-logo.png';
-// import MediumLogo from '../../assets/medium-logo.png';
-// import ZoomLogo from '../../assets/zoom-logo.png';
-// import UberLogo from '../../assets/uber-logo.png';
-// import GrabLogo from '../../assets/grab-logo.png';
 
 const partners = [
     { src: SpotifyLogo, alt: 'Spotify' },
@@ -23,6 +17,11 @@ const partners = [
 ];
 
 const PartnersSection = () => {
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    });
+
     return (
         <Container maxWidth="xl" sx={{ padding: '2rem 0', textAlign: 'center', minHeight: '60vh' }}>
             <Typography variant="h4" component="h2" gutterBottom>
@@ -34,12 +33,19 @@ const PartnersSection = () => {
             <Grid container spacing={5} justifyContent="center" alignItems="center" sx={{ marginTop: '2rem' }}>
                 {partners.map((partner, index) => (
                     <Grid item xs={6} sm={4} md={3} lg={2} key={index} sx={{ display: 'flex', justifyContent: 'center' }}>
-                        <Box
-                            component="img"
-                            src={partner.src}
-                            alt={partner.alt}
-                            sx={{ maxWidth: '100%', height: 'auto', maxHeight: 80 }}
-                        />
+                        <motion.div
+                            ref={ref}
+                            initial={{ opacity: 0, y: 50 }}
+                            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                            transition={{ duration: 0.5, delay: index * 0.2 }}
+                        >
+                            <Box
+                                component="img"
+                                src={partner.src}
+                                alt={partner.alt}
+                                sx={{ maxWidth: '100%', height: 'auto', maxHeight: 80 }}
+                            />
+                        </motion.div>
                     </Grid>
                 ))}
             </Grid>

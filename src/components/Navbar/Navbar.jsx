@@ -30,7 +30,7 @@ const Navbar = () => {
     const menuItems = (
         <List>
             {['Home', 'Noticias', 'Atividades'].map((text) => (
-                <ListItem button key={text}>
+                <ListItem key={text}>
                     <ListItemText primary={text} />
                 </ListItem>
             ))}
