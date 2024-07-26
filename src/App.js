@@ -16,6 +16,8 @@ function App() {
         <Cronometro targetDate="2024-08-15T19:00:00" />
       </Container>
       <ChallengeSection />
+      <Container maxWidth="lg" sx={{ height: '80vh'}}>
+      </Container>
       <Footer />
     </>
   );
