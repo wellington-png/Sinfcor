@@ -9,7 +9,7 @@ import bgImage from '../../assets/rear-view-programmer-working-all-night-long.jp
 
 export default function ActivityCard() {
   return (
-    <Card sx={{ borderRadius: 5 }}>
+    <Card sx={{ borderRadius: 5, textAlign: 'left', }}>
       <CardActionArea>
         <CardMedia
           component="img"

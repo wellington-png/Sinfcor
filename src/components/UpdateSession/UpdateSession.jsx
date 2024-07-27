@@ -7,7 +7,7 @@ const activities = [
     { id: 1, title: 'Palestra', description: 'Lizards are a widespread group of squamate reptiles, with over 6,000species, ranging across all continents except Antarctica.' },
     { id: 2, title: 'Minicurso', description: 'Lizards are a widespread group of squamate reptiles, with over 6,000species, ranging across all continents except Antarctica.' },
     { id: 3, title: 'Jogos', description: 'Lizards are a widespread group of squamate reptiles, with over 6,000species, ranging across all continents except Antarctica.' },
-    { id: 4, title: 'Hackathon', description: 'Lizards are a widespread group of squamate reptiles, with over 6,000species, ranging across all continents except Antarctica.' },
+    { id: 4, title: 'Hackathon', description: 'Lizards are a widespread group of  squamate reptiles, with over 6,000species, ranging across all continents except Antarctica.' },
 ];
 
 const UpdateSession = () => {
@@ -29,7 +29,7 @@ const UpdateSession = () => {
                         xs={12} 
                         sm={6} 
                         md={4} 
-                        lg={3} 
+                        lg={4} 
                         key={activity.id} 
                         display="flex" 
                         justifyContent="center"

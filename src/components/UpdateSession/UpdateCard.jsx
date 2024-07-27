@@ -8,20 +8,24 @@ import bgImage from '../../assets/rear-view-programmer-working-all-night-long.jp
 
 export default function UpdateCard({ title, description }) {
   return (
-    <Card sx={{ borderRadius: 5, width: '100%', maxWidth: '500px' }}>
+    <Card sx={{  width: '100%', maxWidth: '500px', border: 'none', boxShadow: 'none', textAlign: 'left' }}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="250"
           image={bgImage}
           alt="activity image"
+          sx={{borderRadius: 5, objectFit: 'cover'}}
         />
         <CardContent>
-          <Typography gutterBottom variant="h4" component="div">
+          <Typography gutterBottom variant="h4" component="div" color='#242565'>
             {title}
           </Typography>
           <Typography variant="body1" color="text.secondary">
             {description}
+          </Typography>
+          <Typography variant="body2" color="text.secondary" sx={{ marginTop: '1rem' }}>
+            2 dias atrás
           </Typography>
         </CardContent>
       </CardActionArea>
