@@ -33,6 +33,7 @@ const UpdateSession = () => {
                         key={activity.id} 
                         display="flex" 
                         justifyContent="center"
+                        flexGrow={1}
                     >
                         <ActivityCard title={activity.title} description={activity.description} />
                     </Grid>
