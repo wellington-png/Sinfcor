@@ -3,7 +3,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import React from 'react';
 import developerImage from '../../assets/developer.svg'; 
-import bgImage from '../../assets/rear-view-programmer-working-all-night-long.jpg'; 
+import bgImage from '../../assets/rear-view-programmer-working-all-night-long.jpg';
 
 const ChallengeSection = () => {
     const theme = useTheme();
