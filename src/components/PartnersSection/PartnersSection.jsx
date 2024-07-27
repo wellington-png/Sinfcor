@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Grid, Typography } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import SpotifyLogo from '../../assets/sinfcor/image 4.png';
@@ -11,6 +11,7 @@ import MediumLogo from '../../assets/sinfcor/image 17.png';
 import ZoomLogo from '../../assets/sinfcor/image 18.png';
 import UberLogo from '../../assets/sinfcor/image 19.png';
 import GrabLogo from '../../assets/sinfcor/image 20.png';
+import SectionContainer from '../SectionContainer/SectionContainer';
 
 const partners = [
     { src: SpotifyLogo, alt: 'Spotify' },
@@ -31,13 +32,7 @@ const PartnersSection = () => {
     });
 
     return (
-        <Container maxWidth="xl" sx={{ padding: '2rem 0', textAlign: 'center', minHeight: '60vh' }}>
-            <Typography variant="h4" component="h2" gutterBottom>
-                Parceiros
-            </Typography>
-            <Typography variant="body1" gutterBottom>
-                Texto muito massa sobre como estão nos apoiando
-            </Typography>
+        <SectionContainer title='Parceiros' description='Texto muito massa sobre como estão nos apoiando'>
             <Grid container spacing={5} justifyContent="center" alignItems="center" sx={{ marginTop: '2rem' }}>
                 {partners.map((partner, index) => (
                     <Grid item xs={6} sm={4} md={3} lg={2} key={index} sx={{ display: 'flex', justifyContent: 'center' }}>
@@ -57,8 +52,8 @@ const PartnersSection = () => {
                     </Grid>
                 ))}
             </Grid>
-        </Container>
-    );
+        </SectionContainer>
+    )
 };
 
 export default PartnersSection;
