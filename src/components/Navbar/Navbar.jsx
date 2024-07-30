@@ -48,6 +48,7 @@ const Navbar = () => {
                 zIndex: 1100,
                 backgroundColor: scrolled ? 'white' : 'transparent',
                 transition: 'background-color 0.3s ease',
+                padding: '0.2rem',
             }}>
             <Container maxWidth="xl" sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
                 <img src={LogoIF} width={200} alt="Logo IFPI" />
