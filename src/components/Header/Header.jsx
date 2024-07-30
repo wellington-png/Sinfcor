@@ -2,6 +2,7 @@ import { Button, Container, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import Wave from '../../assets/wave.png';
 import styled from 'styled-components';
+import ParticlesComponent from '../ParticlesComponent/ParticlesComponent';
 
 const Title = styled(Typography)`
     background: linear-gradient(to right, #ED4690, #5522CC);
@@ -20,7 +21,7 @@ const Header = () => {
             sx={{
                 display: 'flex',
                 flexDirection: 'column',
-                minHeight: '84vh',
+                minHeight: '100vh',
                 backgroundImage: `url(${Wave})`,
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
@@ -28,6 +29,7 @@ const Header = () => {
                 justifyContent: 'center',
                 marginBottom: '1rem',
             }}>
+            <ParticlesComponent id="particles" />
             <Container maxWidth="xl" sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start' }}>
                     <Container maxWidth="sm" sx={{ margin: 0, display: 'flex', flexDirection: "column", rowGap: '2rem' }}>
