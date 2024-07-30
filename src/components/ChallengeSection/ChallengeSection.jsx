@@ -2,7 +2,6 @@ import { Button, Grid, Typography, Box } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import React from 'react';
-import developerImage from '../../assets/developer.svg'; 
 import bgImage from '../../assets/rear-view-programmer-working-all-night-long.jpg';
 
 const ChallengeSection = () => {
@@ -48,24 +47,6 @@ const ChallengeSection = () => {
                     backgroundColor: "transparent",
                 }}
             >
-                {!isMobile && (
-                    <Grid item md={6}>
-                        <Box
-                            component="img"
-                            src={developerImage}
-                            alt="Developer Image"
-                            sx={{
-                                width: '100%',
-                                maxWidth: 400,
-                                position: 'absolute',
-                                top: 0,
-                                left: 0,
-                                zIndex: 3,
-                                opacity: 0.5,
-                            }}
-                        />
-                    </Grid>
-                )}
                 <Grid item xs={12} md={6} sx={{ textAlign: isMobile ? 'center' : 'left' }}>
                     <Typography variant="h4" component="h2" gutterBottom sx={{color: "#fff", fontWeight: 'bold'}}>
                         Que tal um desafio?
