@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
-import { Box, Button, Container, Drawer, IconButton, Toolbar, Typography, List, ListItem, ListItemText } from "@mui/material";
+import { Box, Button, Container, Drawer, IconButton, Toolbar, Typography, List, ListItem, ListItemText, useMediaQuery, useTheme } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import LogoIF from '../../assets/Logo-IFPI.png';
+import LogoSinfcor from '../../assets/logo-monobranco.png'
+import LogoSinfcor2 from '../../assets/logo-gradientBgTransp.png'
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [drawerOpen, setDrawerOpen] = useState(false);
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
     useEffect(() => {
         const handleScroll = () => {
@@ -54,7 +58,7 @@ const Navbar = () => {
                 <img src={LogoIF} width={200} alt="Logo IFPI" />
                 <Box sx={{ flexGrow: 2 }} />
                 <Box sx={{ display: { xs: 'none', md: 'flex' }, flexGrow: 1, justifyContent: 'center' }}>
-                    <ul style={{ display: 'flex', listStyle: 'none', gap: '1rem', color: '#ffffff' }}>
+                    <ul style={{ display: 'flex', listStyle: 'none', gap: '1rem', color: scrolled ? '#000' : '#fff',  }}>
                         <li>
                             <Button color="inherit">Home</Button>
                         </li>
@@ -66,14 +70,17 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </Box>
-                <Typography variant="h6" component="div" sx={{
+                {/* <Typography variant="h6" component="div" sx={{
                     display: { xs: 'none', md: 'block' },
                     fontWeight: 'bold',
                     color: '#ffffff',
                     fontSize: '1.5rem',
                 }}>
                     SINFCOR
-                </Typography>
+                </Typography> */}
+                <img width={200} src={scrolled ?  LogoSinfcor2 : LogoSinfcor} style={{
+                    display: isMobile ? 'none' : 'block'
+                }} alt='logo' />
                 <IconButton
                     edge="start"
                     color="inherit"

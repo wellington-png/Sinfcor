@@ -8,6 +8,7 @@ import PartnersSection from "./components/PartnersSection/PartnersSection";
 import ActivitySession from "./components/ActivitySession/ActivitySession";
 import UpdateSession from "./components/UpdateSession/UpdateSession";
 import SupportersSection from "./components/SupportersSection/SupportersSection";
+import AboutsSession from "./components/Abouts/ActivitiesSection";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Container maxWidth="lg" sx={{ marginBottom: '1rem'}}>
         <Cronometro targetDate="2024-08-15T19:00:00" />
       </Container>
+      <AboutsSession />
       <ActivitySession />
       <ChallengeSection />
       <SupportersSection />
