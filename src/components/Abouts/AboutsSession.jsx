@@ -4,6 +4,7 @@ import { Box, Container, Grid, Typography, useMediaQuery, useTheme } from '@mui/
 import imagem1 from '../../assets/what_1.png';
 import imagem2 from '../../assets/what_2.png';
 
+
 const AboutsSession = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
