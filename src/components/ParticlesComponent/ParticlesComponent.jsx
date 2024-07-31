@@ -1,17 +1,16 @@
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { useEffect, useMemo, useState } from "react";
-import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
+import { useEffect, useMemo } from "react";
+import { loadSlim } from "@tsparticles/slim";
+import './ParticlesComponent.css';
+import PropTypes from 'prop-types';
 
 
+const ParticlesComponent = ({ id }) => {
 
-const ParticlesComponent = (props) => {
-
-  const [init, setInit] = useState(false);
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
     }).then(() => {
-      setInit(true);
     });
   }, []);
 
@@ -92,7 +91,16 @@ const ParticlesComponent = (props) => {
   );
 
 
-  return <Particles id={props.id} init={particlesLoaded} options={options} />; 
+  return <Particles
+      id={id}
+      className="particles-container"
+      init={particlesLoaded}
+      options={options}
+    />
+};
+
+ParticlesComponent.propTypes = {
+  id: PropTypes.string.isRequired,
 };
 
 export default ParticlesComponent;
