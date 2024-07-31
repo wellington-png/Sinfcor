@@ -14,18 +14,19 @@ const waveAnimation = keyframes`
 const FooterWaveContainer = styled(Box)`
   width: 100%;
   overflow: hidden;
-  height: 100px;
+  height: 10vh;
 `;
 
 const FooterWave = styled.svg`
-  width: 200%; /* Aumenta a largura para permitir a animação de deslizamento */
+  width: 200%; 
   height: auto;
   animation: ${waveAnimation} 10s linear infinite;
-  margin: 0 0 -10px 0; /* Remove a borda inferior */
+  margin: 0 0 -10px 0;
+  
 `;
 
 const FooterContainer = styled(Box)`
-  min-height: 350px;  // Altura mínima do footer
+  min-height: 350px;  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
