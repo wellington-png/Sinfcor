@@ -8,7 +8,7 @@ import PartnersSection from "./components/PartnersSection/PartnersSection";
 import ActivitySession from "./components/ActivitySession/ActivitySession";
 import UpdateSession from "./components/UpdateSession/UpdateSession";
 import SupportersSection from "./components/SupportersSection/SupportersSection";
-import AboutsSession from "./components/Abouts/ActivitiesSection";
+import AboutsSession from "./components/Abouts/AboutsSession";
 
 
 function App() {
