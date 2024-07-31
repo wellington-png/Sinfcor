@@ -50,7 +50,7 @@ const AboutsSession = () => {
             <Grid xs={12} md={6} lg={5}>
               <Box>
                 <Typography variant="h2" sx={{ mb: 3 }}>
-                  What is Minimal?
+                O que é SINFCOR?
                 </Typography>
               </Box>
 
@@ -60,10 +60,7 @@ const AboutsSession = () => {
                     color: theme.palette.mode === 'light' ? 'text.secondary' : 'common.white',
                   }}
                 >
-                  Our theme is the most advanced and user-friendly theme you will find on the market, we
-                  have documentation and video to help set your site really easily, pre-installed demos
-                  you can import in one click and everything from the theme options to page content can
-                  be edited from the front-end. This is the theme you are looking for.
+                  O Simpósio de Informática de Corrente Piauí é um evento imperdível para os apaixonados por tecnologia. Com uma programação rica em minicursos sobre tecnologias emergentes como inteligência artificial e blockchain, palestras sobre inovação e empreendedorismo digital, além de atividades práticas como hackathons e competições de programação, oferece uma oportunidade única para expandir conhecimentos, aprimorar habilidades e conectar-se com outros entusiastas. Venha participar!
                 </Typography>
               </Box>
 
