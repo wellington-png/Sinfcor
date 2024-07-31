@@ -7,8 +7,8 @@ import FapepiLogo from '../../assets/logo-fapepi.png';
 import IfpiVerticalLogo from '../../assets/Logo-IFPI-Corrente-Vertical.png';
 
 const supporters = [
-    { src: FapepiLogo, alt: 'Fapepi' },
-    { src: IfpiVerticalLogo, alt: 'IFPI' },
+    {id: 1, src: FapepiLogo, alt: 'Fapepi' },
+    { id: 2, src: IfpiVerticalLogo, alt: 'IFPI' },
 ];
 
 const SupportersSection = () => {
@@ -21,7 +21,7 @@ const SupportersSection = () => {
         <SectionContainer title='Apoio' description='Texto muito massa sobre como estão nos apoiando' minHeight='55vh'>
             <Grid container spacing={5} justifyContent="center" alignItems="center" sx={{ marginTop: '2rem' }}>
                 {supporters.map((partner, index) => (
-                    <Grid item xs={6} sm={4} md={3} lg={2} key={index} sx={{ display: 'flex', justifyContent: 'center' }}>
+                    <Grid item xs={6} sm={4} md={3} lg={2} key={partner.id} sx={{ display: 'flex', justifyContent: 'center' }}>
                         <motion.div
                             ref={ref}
                             initial={{ opacity: 0, y: 50 }}
@@ -32,7 +32,7 @@ const SupportersSection = () => {
                                 component="img"
                                 src={partner.src}
                                 alt={partner.alt}
-                                sx={{ maxWidth: '100%', height: 'auto', maxHeight: 150 }}
+                                sx={{ maxWidth: '100%', height: 'auto', maxHeight: 200 }}
                             />
                         </motion.div>
                     </Grid>

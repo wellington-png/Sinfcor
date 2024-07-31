@@ -39,7 +39,6 @@ const AboutsSession = () => {
                   <img
                     alt="our office 2"
                     src={imagem1}
-                    ratio="1/1"
                   />
                 </Box>
               </Grid>
@@ -55,7 +54,6 @@ const AboutsSession = () => {
                   <img
                     alt="our office 1"
                     src={imagem2}
-                    ratio="3/4"
                   />
                 </Box>
               </Grid>
