@@ -63,7 +63,15 @@ const AboutsSession = () => {
             <Grid xs={12} md={6} lg={5}>
               <Box>
                 <Typography variant="h2" sx={{ mb: 3 }}>
-                  O que é SINFCOR?
+                  O que é <strong style={{
+                    color: '#FFFFFF',
+                    // #5324c6 #840fbe
+                    background: 'linear-gradient(90deg, #5324c6 0%, #840fbe 100%)', 
+                    transform: 'rotate(-15deg)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                                                           
+                  }}>SINFCOR</strong>?
                 </Typography>
               </Box>
               <Box>

@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import ParticlesComponent from '../ParticlesComponent/ParticlesComponent';
 
 const Title = styled(Typography)`
-    background: linear-gradient(to right, #ED4690, #5522CC);
+    background: linear-gradient(90deg, #5324c6 0%, #840fbe 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
