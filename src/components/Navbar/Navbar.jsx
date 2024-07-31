@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Box, Button, Container, Drawer, IconButton, Toolbar, Typography, List, ListItem, ListItemText, useMediaQuery, useTheme } from "@mui/material";
+import { Box, Button, Container, Drawer, IconButton, Toolbar, List, ListItem, ListItemText, useMediaQuery, useTheme } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import LogoIF from '../../assets/Logo-IFPI.png';
 import LogoSinfcor from '../../assets/logo-monobranco.png'

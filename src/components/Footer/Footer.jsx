@@ -14,7 +14,7 @@ const waveAnimation = keyframes`
 const FooterWaveContainer = styled(Box)`
   width: 100%;
   overflow: hidden;
-  height: 10vh;
+  max-height: 10vh;
 `;
 
 const FooterWave = styled.svg`

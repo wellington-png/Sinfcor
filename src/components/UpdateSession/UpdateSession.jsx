@@ -1,6 +1,6 @@
 import React from 'react';
 import SectionContainer from '../SectionContainer/SectionContainer';
-import { Grid, useMediaQuery, useTheme } from '@mui/material';
+import { Grid } from '@mui/material';
 import UpdateCard from './UpdateCard';
 
 const activities = [
@@ -11,8 +11,6 @@ const activities = [
 ];
 
 const UpdateSession = () => {
-    const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
         <SectionContainer title='Atualizações' description='Veja as últimas atualizações do evento e fique por dentro de tudo.'>
