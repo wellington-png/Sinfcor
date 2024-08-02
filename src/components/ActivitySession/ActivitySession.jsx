@@ -1,22 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SectionContainer from '../SectionContainer/SectionContainer';
 import { Grid, useMediaQuery, useTheme } from '@mui/material';
 import ActivityCard from '../ActivityCard/ActivityCard';
+import ActivityModal from '../ActivityModal/ActivityModal';
+import activities from './data';
 
-// Lista mock de atividades
-const activities = [
-    { id: 1, title: 'Atividade 1', description: 'Descrição da atividade 1' },
-    { id: 2, title: 'Atividade 2', description: 'Descrição da atividade 2' },
-    { id: 3, title: 'Atividade 3', description: 'Descrição da atividade 3' },
-    { id: 4, title: 'Atividade 4', description: 'Descrição da atividade 4' },
-];
 
 const ActivitySession = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    const [selectedActivity, setSelectedActivity] = useState(null);
+    const [modalOpen, setModalOpen] = useState(false);
+
+    const handleCardClick = (activity) => {
+        setSelectedActivity(activity);
+        setModalOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setModalOpen(false);
+        setSelectedActivity(null);
+    };
 
     return (
-        <SectionContainer title='Atividades - IFPI'>
+        <SectionContainer title='Atividades'>
             <Grid 
                 container 
                 spacing={5} 
@@ -35,10 +42,23 @@ const ActivitySession = () => {
                         display="flex" 
                         justifyContent="center"
                     >
-                        <ActivityCard title={activity.title} description={activity.description} />
+                        <ActivityCard 
+                            title={activity.title} 
+                            description={activity.description} 
+                            image={activity.image}
+                            date={activity.date}
+                            onClick={() => handleCardClick(activity)}
+                        />
                     </Grid>
                 ))}
             </Grid>
+            {selectedActivity && (
+                <ActivityModal 
+                    open={modalOpen} 
+                    onClose={handleCloseModal} 
+                    activity={selectedActivity}
+                />
+            )}
         </SectionContainer>
     );
 };
