@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Typography, List, ListItem, ListItemText } from '@mui/material';
+import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Typography, List, ListItem, ListItemText, CardMedia } from '@mui/material';
 import PropTypes from 'prop-types';
 
 const ActivityModal = ({ open, onClose, activity }) => {
@@ -7,10 +7,10 @@ const ActivityModal = ({ open, onClose, activity }) => {
 
     return (
         <Dialog open={open} onClose={onClose} maxWidth="sm" fullWidth>
-            <DialogTitle>{activity.title}</DialogTitle>
+            <DialogTitle color='#242565'>{activity.title}</DialogTitle>
             <DialogContent>
-                <img src={activity.image} alt={activity.title} style={{ width: '100%', height: 'auto', marginBottom: '1rem' }} />
-                <Typography variant="body1" paragraph>
+                <CardMedia  component="img" height="200" image={activity.image} alt={activity.title} sx={{ borderRadius: 5 }} />
+                <Typography variant="body1" paragraph sx={{ mt: 2 }}>
                     {activity.description}
                 </Typography>
                 <Typography variant="body2" color="textSecondary">
@@ -20,9 +20,9 @@ const ActivityModal = ({ open, onClose, activity }) => {
                     <strong>Localização:</strong> {activity.location}
                 </Typography>
                 <Typography variant="body2" color="textSecondary">
-                    <strong>Palestrantes:</strong>
+                    <strong>Palestrantes</strong>
                 </Typography>
-                <List>
+                <List dense>
                     {activity.speakers.map((speaker, index) => (
                         <ListItem key={index}>
                             <ListItemText primary={speaker} />

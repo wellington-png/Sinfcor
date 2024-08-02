@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 
 const ActivityCard = ({ title, description, image, date, onClick }) => {
   return (
-    <Card sx={{ borderRadius: 5, textAlign: 'left' }}>
+    <Card sx={{ borderRadius: 5, textAlign: 'left', width: '460px', height: '420px'}}>
       <CardActionArea onClick={onClick}>
         <CardMedia
           component="img"
@@ -17,7 +17,7 @@ const ActivityCard = ({ title, description, image, date, onClick }) => {
           alt={title}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant="h4" component="div" color='#242565'>
             {title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
