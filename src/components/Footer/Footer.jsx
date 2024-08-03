@@ -1,6 +1,7 @@
 import React from 'react';
 import IconFacebook from '../../assets/icons/facebook.svg';
 import IconTwitter from '../../assets/icons/twitter.svg';
+import QRCode from '../../assets/images/qrcode.jpeg';
 import { Box, Container, Typography } from '@mui/material';
 import Divider from '@mui/material/Divider';
 import styled, { keyframes } from 'styled-components';
@@ -68,33 +69,30 @@ export const Footer = () => {
       </FooterWaveContainer>
       <FooterContainer>
         <Container maxWidth="xl" sx={{ display: 'flex', flexDirection: 'column', height: '100%', color: 'white' }}>
-          <Container maxWidth="sm" sx={{
-            flexGrow: 1,
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-            textAlign: 'center',
-            rowGap: '1rem'
-          }}>
-            <Typography sx={{
-              fontFamily: 'Light',
-              fontSize: '2.5rem',
-              color: 'white',
-              fontWeight: 'bold',
-            }}>SINFCOR - IFPI</Typography>
-            <Typography>O Simpósio de Informática de Corrente Piauí é um evento que promove o conhecimento e a inovação tecnológica, oferecendo minicursos, palestras e atividades práticas. É a oportunidade perfeita para se conectar com outros entusiastas, aprender novas habilidades e explorar as tendências emergentes da informática.</Typography>
-            <Box sx={{ display: 'flex', columnGap: '1rem' }}>
-              <a href='https://www.facebook.com/'>
-                <img src={IconFacebook} alt='Facebook' />
-              </a>
-              <a href='https://www.twitter.com/'>
-                <img src={IconTwitter} alt='Twitter' />
-              </a>
+          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexGrow: 1 }}>
+            <Box sx={{ textAlign: 'left', flex: 1, marginRight: '2rem' }}>
+              <Typography sx={{
+                fontFamily: 'Light',
+                fontSize: '2.5rem',
+                color: 'white',
+                fontWeight: 'bold',
+              }}>SINFCOR - IFPI</Typography>
+              <Typography>O Simpósio de Informática de Corrente Piauí é um evento que promove o conhecimento e a inovação tecnológica, oferecendo minicursos, palestras e atividades práticas. É a oportunidade perfeita para se conectar com outros entusiastas, aprender novas habilidades e explorar as tendências emergentes da informática.</Typography>
             </Box>
-          </Container>
+            <Box sx={{ flex: 1, textAlign: 'right' }}>
+              <img src={QRCode} alt='QR Code' style={{ maxWidth: '100%', height: 'auto' }} />
+            </Box>
+          </Box>
           <Divider variant="middle" sx={{ borderColor: '#4C4D8B' }} />
-          <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '2rem' }}>
+          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '2rem', columnGap: '1rem' }}>
+            <a href='https://www.facebook.com/'>
+              <img src={IconFacebook} alt='Facebook' />
+            </a>
+            <a href='https://www.twitter.com/'>
+              <img src={IconTwitter} alt='Twitter' />
+            </a>
+          </Box>
+          <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '1rem' }}>
             <Typography>&copy; 2024 SINFCOR. Todos os direitos reservados.</Typography>
           </Box>
         </Container>
