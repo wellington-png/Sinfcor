@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Typography, List, ListItem, ListItemText, CardMedia } from '@mui/material';
+import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Typography, List, ListItem, ListItemText, CardMedia, Box } from '@mui/material';
 import PropTypes from 'prop-types';
 
 const ActivityModal = ({ open, onClose, activity }) => {
@@ -7,35 +7,70 @@ const ActivityModal = ({ open, onClose, activity }) => {
 
     return (
         <Dialog open={open} onClose={onClose} maxWidth="sm" fullWidth>
-            <DialogTitle color='#242565'>{activity.title}</DialogTitle>
-            <DialogContent>
-                <CardMedia  component="img" height="200" image={activity.image} alt={activity.title} sx={{ borderRadius: 5 }} />
-                <Typography variant="body1" paragraph sx={{ mt: 2 }}>
+            <DialogTitle sx={{ background: 'linear-gradient(90deg, #5324c6 0%, #840fbe 100%)', color: '#fff', textAlign: 'center', fontSize: '1.5rem', fontWeight: 'bold' }}>
+                {activity.title}
+            </DialogTitle>
+            <DialogContent sx={{ padding: '24px' }}>
+                <CardMedia
+                    component="img"
+                    height="200"
+                    image={activity.image}
+                    alt={activity.title}
+                    sx={{ width: '100%', marginBottom: '16px' }}
+                />
+                <Typography variant="body1" paragraph>
                     {activity.description}
                 </Typography>
-                <Typography variant="body2" color="textSecondary">
+                <Typography variant="body2" color="textSecondary" sx={{ marginBottom: '8px' }}>
                     <strong>Data:</strong> {activity.date}
                 </Typography>
-                <Typography variant="body2" color="textSecondary">
+                <Typography variant="body2" color="textSecondary" sx={{ marginBottom: '8px' }}>
                     <strong>Localização:</strong> {activity.location}
                 </Typography>
-                <Typography variant="body2" color="textSecondary">
-                    <strong>Palestrantes</strong>
+                <Typography variant="body2" color="textSecondary" sx={{ marginBottom: '8px' }}>
+                    <strong>Palestrantes:</strong>
                 </Typography>
                 <List dense>
                     {activity.speakers.map((speaker, index) => (
-                        <ListItem key={index}>
+                        <ListItem key={index} sx={{ paddingLeft: 0 }}>
                             <ListItemText primary={speaker} />
                         </ListItem>
                     ))}
                 </List>
-                <Typography variant="body2" color="textSecondary">
-                    <strong>Inscrição:</strong> <a href={activity.registration} target="_blank" rel="noopener noreferrer">Clique aqui</a>
-                </Typography>
             </DialogContent>
-            <DialogActions>
-                <Button onClick={onClose} color="primary">
+            <DialogActions sx={{ justifyContent: 'flex-end', padding: '16px 24px' }}>
+                <Button
+                    onClick={onClose}
+                    variant="outlined"
+                    color="primary"
+                    sx={{
+                        padding: '10px 20px',
+                        borderRadius: '20px',
+                        borderColor: '#F5167E',
+                        color: '#F5167E',
+                        '&:hover': {
+                            backgroundColor: '#F5167E1f',
+                        }
+                    }}
+                >
                     Fechar
+                </Button>
+                <Button
+                    href={activity.registration}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variant="contained"
+                    color="primary"
+                    sx={{
+                        backgroundColor: '#F5167E',
+                        padding: '10px 20px',
+                        borderRadius: '20px',
+                        '&:hover': {
+                            backgroundColor: '#F5167Ec1',
+                        }
+                    }}
+                >
+                    Inscrição
                 </Button>
             </DialogActions>
         </Dialog>

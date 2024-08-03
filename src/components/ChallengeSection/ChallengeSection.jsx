@@ -48,10 +48,10 @@ const ChallengeSection = () => {
                 }}
             >
                 <Grid item xs={12} md={6} sx={{ textAlign: isMobile ? 'center' : 'left' }}>
-                    <Typography variant="h4" component="h2" gutterBottom sx={{color: "#fff", fontWeight: 'bold', fontFamily: 'Light',}}>
+                    <Typography variant="h4" component="h2" gutterBottom sx={{ color: "#fff", fontWeight: 'bold', fontFamily: 'Light', fontSize: "2.5rem !important" }}>
                         Que tal um desafio?
                     </Typography>
-                    <Typography variant="body1" gutterBottom sx={{color: "#fff"}}>
+                    <Typography variant="body1" gutterBottom sx={{ color: "#fff", fontSize: '1.4rem' }}>
                         Gosta de desenvolver soluções?
                         <br />
                         Venha participar do nosso HACKATHON!
