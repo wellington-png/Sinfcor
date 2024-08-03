@@ -8,7 +8,7 @@ const activities = [
     { id: 1, title: 'Atividade 1', description: 'Descrição da atividade 1' },
     { id: 2, title: 'Atividade 2', description: 'Descrição da atividade 2' },
     { id: 3, title: 'Atividade 3', description: 'Descrição da atividade 3' },
-    { id: 4, title: 'Atividade 4', description: 'Descrição da atividade 4' },
+    // { id: 4, title: 'Atividade 4', description: 'Descrição da atividade 4' },
 ];
 
 const ActivitySession = () => {
