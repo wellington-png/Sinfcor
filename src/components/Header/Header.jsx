@@ -11,7 +11,8 @@ const Title = styled(Typography)`
     background-clip: text;
     color: transparent;
     font-weight: bold;
-    font-size: 3.5rem;
+    font-size: 4.5rem !important;
+    font-family: 'Light' !important;
 `;
 
 const Header = () => {
@@ -33,10 +34,7 @@ const Header = () => {
             <Container maxWidth="xl" sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start' }}>
                     <Container maxWidth="sm" sx={{ margin: 0, display: 'flex', flexDirection: "column", rowGap: '2rem' }}>
-                        <Title variant="h3" component="h1" gutterBottom sx={{
-                            fontFamily: 'Poppins',
-                            fontWeight: 'bold',
-                        }}>
+                        <Title variant="h3" component="h1" gutterBottom>
                             Simpósio de Informática de Corrente
                         </Title>
                     <Typography variant="h5" component="h2" gutterBottom sx={{

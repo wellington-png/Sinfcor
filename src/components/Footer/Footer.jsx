@@ -77,8 +77,13 @@ export const Footer = () => {
             textAlign: 'center',
             rowGap: '1rem'
           }}>
-            <Typography>SINFCOR - IFPI</Typography>
-            <Typography>Eventick is a global self-service ticketing platform for live experiences that allows anyone to create, share, find and attend events that fuel their passions and enrich their lives.</Typography>
+            <Typography sx={{
+              fontFamily: 'Light',
+              fontSize: '2.5rem',
+              color: 'white',
+              fontWeight: 'bold',
+            }}>SINFCOR - IFPI</Typography>
+            <Typography>O Simpósio de Informática de Corrente Piauí é um evento que promove o conhecimento e a inovação tecnológica, oferecendo minicursos, palestras e atividades práticas. É a oportunidade perfeita para se conectar com outros entusiastas, aprender novas habilidades e explorar as tendências emergentes da informática.</Typography>
             <Box sx={{ display: 'flex', columnGap: '1rem' }}>
               <a href='https://www.facebook.com/'>
                 <img src={IconFacebook} alt='Facebook' />
@@ -90,7 +95,7 @@ export const Footer = () => {
           </Container>
           <Divider variant="middle" sx={{ borderColor: '#4C4D8B' }} />
           <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '2rem' }}>
-            <Typography>© 2024 SINFCOR. All rights reserved.</Typography>
+            <Typography>&copy; 2024 SINFCOR. Todos os direitos reservados.</Typography>
           </Box>
         </Container>
       </FooterContainer>

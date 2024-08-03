@@ -25,7 +25,7 @@ const SectionContainer = ({ title, description = null, minHeight = '60vh', child
         <Container maxWidth="xl" sx={{ padding: '2rem 0', textAlign: 'center', minHeight: minHeight }}>
             {/* Text Divider */}
             <Divider variant="h4" gutterBottom>
-                <Typography variant="h4" component="h2">
+                <Typography variant="h4" component="h2" sx={{fontFamily: 'Light',}}>
                     {title}
                 </Typography>
             </Divider>

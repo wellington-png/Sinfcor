@@ -18,7 +18,7 @@ const SupportersSection = () => {
     });
 
     return (
-        <SectionContainer title='Apoio' description='Texto muito massa sobre como estão nos apoiando' minHeight='55vh'>
+        <SectionContainer title='Apoio' description='Instituições que apoiam o evento.' minHeight='55vh'>
             <Grid container spacing={5} justifyContent="center" alignItems="center" sx={{ marginTop: '2rem' }}>
                 {supporters.map((partner, index) => (
                     <Grid item xs={6} sm={4} md={3} lg={2} key={partner.id} sx={{ display: 'flex', justifyContent: 'center' }}>

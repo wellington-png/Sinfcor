@@ -32,7 +32,7 @@ const PartnersSection = () => {
     });
 
     return (
-        <SectionContainer title='Parceiros' description='Texto muito massa sobre como estão nos apoiando' minHeight='55vh'>
+        <SectionContainer title='Parceiros' description='Grandes empresas confiam em nossos serviços.' minHeight='55vh'>
             <Grid container spacing={5} justifyContent="center" alignItems="center" sx={{ marginTop: '2rem' }}>
                 {partners.map((partner, index) => (
                     <Grid item xs={6} sm={4} md={3} lg={2} key={index} sx={{ display: 'flex', justifyContent: 'center' }}>
