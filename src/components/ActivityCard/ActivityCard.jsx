@@ -4,29 +4,40 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-import bgImage from '../../assets/rear-view-programmer-working-all-night-long.jpg';
+import PropTypes from 'prop-types';
 
-
-export default function ActivityCard() {
+const ActivityCard = ({ title, description, image, date, onClick }) => {
   return (
-    <Card sx={{ borderRadius: 5, textAlign: 'left', }}>
-      <CardActionArea>
+    <Card sx={{ borderRadius: 5, textAlign: 'left', width: '460px', height: '420px'}}>
+      <CardActionArea onClick={onClick}>
         <CardMedia
           component="img"
           height="200"
-          image={bgImage}
-          alt="green iguana"
+          image={image}
+          alt={title}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Lizard
+          <Typography gutterBottom variant="h4" component="div" color='#242565'>
+            {title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            {description}
+          </Typography>
+          <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
+            {date}
           </Typography>
         </CardContent>
       </CardActionArea>
     </Card>
   );
-}
+};
+
+ActivityCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  onClick: PropTypes.func
+};
+
+export default ActivityCard;
