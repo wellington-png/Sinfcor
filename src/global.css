@@ -19,6 +19,19 @@
     --maxWidth-lg: 1200px;
     --maxWidth-xl: 1440px;
   }
+
+  @font-face {
+    font-family: "Light";
+    src: local("big_noodle_titling"),
+      url("./assets/fonts/big_noodle_titling.ttf") format("truetype");
+  }
+
+
+  @font-face {
+    font-family: "Medium";
+    src: local("big_noodle_titling_oblique"),
+      url("./assets/fonts/big_noodle_titling_oblique.ttf") format("truetype");
+  }
   
   *:focus-visible {
     outline: 2px solid var(--mui-palette-primary-main);
