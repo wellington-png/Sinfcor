@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Typography, List, ListItem, ListItemText, CardMedia, Box } from '@mui/material';
+import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Typography, List, ListItem, ListItemText, CardMedia } from '@mui/material';
 import PropTypes from 'prop-types';
 
 const ActivityModal = ({ open, onClose, activity }) => {
