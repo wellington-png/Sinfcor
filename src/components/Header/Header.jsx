@@ -10,9 +10,9 @@ const Title = styled(Typography)`
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
-    font-weight: bold;
     font-size: 4.5rem !important;
-    font-family: 'Light' !important;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700 !important;
 `;
 
 const Header = () => {
