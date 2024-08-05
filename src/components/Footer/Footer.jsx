@@ -71,7 +71,7 @@ export const Footer = () => {
           <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexGrow: 1 }}>
             <Box sx={{ textAlign: 'left', flex: 1, marginRight: '2rem' }}>
               <Typography sx={{
-                fontFamily: 'Light',
+                fontFamily: "Montserrat",
                 fontSize: '2.5rem',
                 color: 'white',
                 fontWeight: 'bold',

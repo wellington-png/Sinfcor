@@ -61,7 +61,7 @@ const AboutsSession = () => {
             </Grid>
             <Grid xs={12} md={6} lg={5}>
               <Box>
-                <Typography variant="h2" sx={{ mb: 3, fontFamily: 'Light', }}>
+                <Typography variant="h2" sx={{ mb: 3, fontFamily: "Montserrat", }}>
                   O que é <strong style={{
                     color: '#FFFFFF',
                     // #5324c6 #840fbe
@@ -76,7 +76,7 @@ const AboutsSession = () => {
               <Box>
                 <Typography
                   sx={{
-                    color: theme.palette.mode === 'light' ? 'text.secondary' : 'common.white',
+                    color: theme.palette.mode === "Montserrat" ? 'text.secondary' : 'common.white',
                   }}
                 >
                   O Simpósio de Informática de Corrente Piauí é um evento imperdível para os apaixonados por tecnologia. Com uma programação rica em minicursos sobre tecnologias emergentes como inteligência artificial e blockchain, palestras sobre inovação e empreendedorismo digital, além de atividades práticas como hackathons e competições de programação, oferece uma oportunidade única para expandir conhecimentos, aprimorar habilidades e conectar-se com outros entusiastas. Venha participar!
