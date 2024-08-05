@@ -74,11 +74,7 @@ const AboutsSession = () => {
                 </Typography>
               </Box>
               <Box>
-                <Typography
-                  sx={{
-                    color: theme.palette.mode === "Montserrat" ? 'text.secondary' : 'common.white',
-                  }}
-                >
+                <Typography>
                   O Simpósio de Informática de Corrente Piauí é um evento imperdível para os apaixonados por tecnologia. Com uma programação rica em minicursos sobre tecnologias emergentes como inteligência artificial e blockchain, palestras sobre inovação e empreendedorismo digital, além de atividades práticas como hackathons e competições de programação, oferece uma oportunidade única para expandir conhecimentos, aprimorar habilidades e conectar-se com outros entusiastas. Venha participar!
                 </Typography>
               </Box>
