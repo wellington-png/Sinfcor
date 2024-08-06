@@ -18,7 +18,7 @@ const Title = styled(Typography)`
 const Header = () => {
 
     const onDownload = () => {
-        window.open(Timeline);
+        window.open(Timeline);   
     }
 
     return (
