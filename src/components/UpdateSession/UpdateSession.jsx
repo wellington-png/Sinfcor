@@ -13,7 +13,7 @@ const activities = [
 const UpdateSession = () => {
 
     return (
-        <SectionContainer title='Atualizações' description='Veja as últimas atualizações do evento e fique por dentro de tudo.'>
+        <SectionContainer minHeight='0vh' title='Atualizações' description='Veja as últimas atualizações do evento e fique por dentro de tudo.'>
             <Grid 
                 container 
                 spacing={5} 
@@ -22,7 +22,7 @@ const UpdateSession = () => {
                 sx={{ marginTop: '2rem' }}
             >
             </Grid>
-            <UpdateCard/>
+            {/* <UpdateCard/> */}
         </SectionContainer>
     );
 };
