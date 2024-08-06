@@ -13,7 +13,7 @@ const activities = [
 const UpdateSession = () => {
 
     return (
-        <SectionContainer title='Atualizações' description='Veja as últimas atualizações do evento e fique por dentro de tudo.'>
+        <SectionContainer minHeight='0vh' title='Atualizações' description='Veja as últimas atualizações do evento e fique por dentro de tudo.'>
             <Grid 
                 container 
                 spacing={5} 
@@ -21,21 +21,8 @@ const UpdateSession = () => {
                 alignItems="center" 
                 sx={{ marginTop: '2rem' }}
             >
-                {activities.map(activity => (
-                    <Grid 
-                        item 
-                        xs={12} 
-                        sm={6} 
-                        md={4} 
-                        lg={4} 
-                        key={activity.id} 
-                        display="flex" 
-                        justifyContent="center"
-                    >
-                        <UpdateCard title={activity.title} description={activity.description} />
-                    </Grid>
-                ))}
             </Grid>
+            {/* <UpdateCard/> */}
         </SectionContainer>
     );
 };
