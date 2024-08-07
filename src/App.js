@@ -10,6 +10,7 @@ import ActivitySession from "./components/ActivitySession/ActivitySession";
 import UpdateSession from "./components/UpdateSession/UpdateSession";
 import SupportersSection from "./components/SupportersSection/SupportersSection";
 import AboutsSession from "./components/Abouts/AboutsSession";
+import IndividualIntervalsExample from "./components/UpdateSession/UpdateCard";
 
 function App() {
   const [targetDate, setTargetDate] = useState(new Date("2024-08-16T08:00:00"));
@@ -49,6 +50,7 @@ function App() {
       <SupportersSection />
       <PartnersSection />
       <UpdateSession />
+      <IndividualIntervalsExample />
       <Footer />
     </>
   );

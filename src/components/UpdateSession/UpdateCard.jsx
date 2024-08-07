@@ -1,34 +1,54 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
-import bgImage from '../../assets/rear-view-programmer-working-all-night-long.jpg';
+import React from 'react';
+import Carousel from 'react-bootstrap/Carousel';
+import Img from '../../assets/rear-view-programmer-working-all-night-long.jpg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './carouselStyles.css'; // Adicionei esta linha para importar o CSS
 
-export default function UpdateCard({ title, description }) {
+function IndividualIntervalsExample() {
   return (
-    <Card sx={{  width: '100%', maxWidth: '500px', border: 'none', boxShadow: 'none', textAlign: 'left' }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="250"
-          image={bgImage}
-          alt="activity image"
-          sx={{borderRadius: 5, objectFit: 'cover'}}
+    <Carousel>
+      <Carousel.Item interval={1500}>
+        <img
+          className="d-block w-100 carousel-img"
+          src={Img}
+          alt="First slide"
+          height={'600'}
         />
-        <CardContent>
-          <Typography gutterBottom variant="h4" component="div" color='#242565'>
-            {title}
-          </Typography>
-          <Typography variant="body1" color="text.secondary">
-            {description}
-          </Typography>
-          <Typography variant="body2" color="text.secondary" sx={{ marginTop: '1rem' }}>
-            2 dias atrás
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+        <Carousel.Caption>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item interval={1500}>
+        <img
+          className="d-block w-100 carousel-img"
+          src={Img}
+          alt="Second slide"
+          height={'600'}
+        />
+        <Carousel.Caption>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item interval={1500}>
+        <img
+          className="d-block w-100 carousel-img"
+          src={Img}
+          alt="Third slide"
+          height={'600'}
+        />
+        <Carousel.Caption>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item interval={1500}>
+        <img
+          className="d-block w-100 carousel-img"
+          src={Img}
+          alt="Fourth slide"
+          height={'600'}
+        />
+        <Carousel.Caption>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
   );
 }
+
+export default IndividualIntervalsExample;
