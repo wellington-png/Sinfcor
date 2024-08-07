@@ -22,7 +22,7 @@ const ActivityCard = ({ title, description, image, date, hora, onClick }) => {
             {title}
           </Typography>
           <Typography variant="body2" color="text.secondary" sx={{ flex: 1, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-            {description} Lorem ipsum dolor sit amet consectetur adipisicing elit. Et sunt accusamus, excepturi laboriosam consequatur ex fuga minima voluptate labore. Pariatur eos ratione sequi dolorem delectus, placeat fugiat accusantium sit culpa.
+            {description}
           </Typography>
           <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
             {date} - {hora}
