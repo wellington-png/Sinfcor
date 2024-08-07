@@ -6,9 +6,9 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import PropTypes from 'prop-types';
 
-const ActivityCard = ({ title, description, image, date, onClick }) => {
+const ActivityCard = ({ title, description, image, date, hora, onClick }) => {
   return (
-    <Card sx={{ borderRadius: 5, textAlign: 'left', width: '460px', height: '420px'}}>
+    <Card sx={{ borderRadius: 5, textAlign: 'left', width: '460px', height: '420px' }}>
       <CardActionArea onClick={onClick}>
         <CardMedia
           component="img"
@@ -24,7 +24,7 @@ const ActivityCard = ({ title, description, image, date, onClick }) => {
             {description}
           </Typography>
           <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
-            {date}
+            {date} - {hora}
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -37,6 +37,7 @@ ActivityCard.propTypes = {
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
+  hora: PropTypes.string.isRequired, 
   onClick: PropTypes.func
 };
 

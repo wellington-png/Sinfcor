@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import SectionContainer from '../SectionContainer/SectionContainer';
-import { Grid, useMediaQuery, useTheme } from '@mui/material';
+import { Grid, useMediaQuery, useTheme, Button } from '@mui/material';
 import ActivityCard from '../ActivityCard/ActivityCard';
 import ActivityModal from '../ActivityModal/ActivityModal';
 import activities from './data';
-
 
 const ActivitySession = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const [selectedActivity, setSelectedActivity] = useState(null);
     const [modalOpen, setModalOpen] = useState(false);
+    const [visibleCount, setVisibleCount] = useState(6); 
 
     const handleCardClick = (activity) => {
         setSelectedActivity(activity);
@@ -22,6 +22,10 @@ const ActivitySession = () => {
         setSelectedActivity(null);
     };
 
+    const handleLoadMore = () => {
+        setVisibleCount(prevCount => prevCount + 6); 
+    };
+
     return (
         <SectionContainer title='Atividades'>
             <Grid 
@@ -31,7 +35,7 @@ const ActivitySession = () => {
                 alignItems="center" 
                 sx={{ marginTop: '2rem' }}
             >
-                {activities.map(activity => (
+                {activities.slice(0, visibleCount).map(activity => (
                     <Grid 
                         item 
                         xs={12} 
@@ -47,11 +51,22 @@ const ActivitySession = () => {
                             description={activity.description} 
                             image={activity.image}
                             date={activity.date}
+                            hora={activity.hora}
                             onClick={() => handleCardClick(activity)}
                         />
                     </Grid>
                 ))}
             </Grid>
+            {activities.length > visibleCount && (
+                <Button 
+                    variant="contained" 
+                    color="primary" 
+                    onClick={handleLoadMore} 
+                    sx={{ marginTop: '2rem' }}
+                >
+                    Mais
+                </Button>
+            )}
             {selectedActivity && (
                 <ActivityModal 
                     open={modalOpen} 
