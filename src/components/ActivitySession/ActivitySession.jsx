@@ -33,7 +33,7 @@ const ActivitySession = () => {
                 spacing={5} 
                 justifyContent={isMobile ? "center" : "flex-start"} 
                 alignItems="center" 
-                sx={{ marginTop: '2rem' }}
+                sx={{ marginTop: '2rem', padding: '0 1rem' }}
             >
                 {activities.slice(0, visibleCount).map(activity => (
                     <Grid 
