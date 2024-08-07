@@ -9,20 +9,20 @@ import bgImage from '../../assets/rear-view-programmer-working-all-night-long.jp
 
 const ActivityCard = ({ title, description, image, date, hora, onClick }) => {
   return (
-    <Card sx={{ borderRadius: 5, textAlign: 'left', width: '460px', height: '420px' }}>
-      <CardActionArea onClick={onClick}>
+    <Card sx={{ borderRadius: 5, textAlign: 'left', flex: 1, height: 320 }}>
+      <CardActionArea onClick={onClick} sx={{ height: '100%' }}>
         <CardMedia
           component="img"
           height="200"
           image={bgImage}
           alt={title}
         />
-        <CardContent>
-          <Typography gutterBottom variant="h4" component="div" color='#242565'>
+        <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: 'calc(100% - 200px)' }}>
+          <Typography gutterBottom variant="h5" component="div" sx={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
             {title}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {description}
+          <Typography variant="body2" color="text.secondary" sx={{ flex: 1, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+            {description} Lorem ipsum dolor sit amet consectetur adipisicing elit. Et sunt accusamus, excepturi laboriosam consequatur ex fuga minima voluptate labore. Pariatur eos ratione sequi dolorem delectus, placeat fugiat accusantium sit culpa.
           </Typography>
           <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
             {date} - {hora}
@@ -38,7 +38,7 @@ ActivityCard.propTypes = {
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
-  hora: PropTypes.string.isRequired, 
+  hora: PropTypes.string.isRequired,
   onClick: PropTypes.func
 };
 
