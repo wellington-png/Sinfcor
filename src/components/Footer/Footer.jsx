@@ -1,7 +1,6 @@
 import React from 'react';
-import IconFacebook from '../../assets/icons/facebook.svg';
-import IconTwitter from '../../assets/icons/twitter.svg';
-import QRCode from '../../assets/images/qrcode.jpeg';
+import IconInstagram from '../../assets/icons/instagram.svg';
+import QRCode from '../../assets/images/qrcode.png';
 import { Box, Container, Typography } from '@mui/material';
 import styled, { keyframes } from 'styled-components';
 
@@ -68,7 +67,10 @@ export const Footer = () => {
       </FooterWaveContainer>
       <FooterContainer>
         <Container maxWidth="xl" sx={{ display: 'flex', flexDirection: 'column', height: '100%', color: 'white' }}>
-          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexGrow: 1 }}>
+          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexGrow: 1, gap: 2, flexDirection:{
+            xs: 'column',
+            md: 'row'
+          } }}>
             <Box sx={{ textAlign: 'left', flex: 1, marginRight: '2rem' }}>
               <Typography sx={{
                 fontFamily: "Montserrat",
@@ -79,15 +81,12 @@ export const Footer = () => {
               <Typography>O Simpósio de Informática de Corrente Piauí é um evento que promove o conhecimento e a inovação tecnológica, oferecendo minicursos, palestras e atividades práticas. É a oportunidade perfeita para se conectar com outros entusiastas, aprender novas habilidades e explorar as tendências emergentes da informática.</Typography>
             </Box>
             <Box sx={{ flex: 1, textAlign: 'right' }}>
-              <img src={QRCode} alt='QR Code' style={{ maxWidth: '100%', height: 'auto' }} />
+              <img src={QRCode} alt='QR Code' style={{ maxWidth: '200px', height: 'auto' }} />
             </Box>
           </Box>
           <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '2rem', columnGap: '1rem' }}>
             <a href='https://www.facebook.com/'>
-              <img src={IconFacebook} alt='Facebook' />
-            </a>
-            <a href='https://www.twitter.com/'>
-              <img src={IconTwitter} alt='Twitter' />
+              <img src={IconInstagram} alt='Facebook' />
             </a>
           </Box>
           <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '1rem' }}>
