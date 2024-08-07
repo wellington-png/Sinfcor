@@ -27,10 +27,11 @@ const Header = () => {
                                 O SINFCOR é um evento organizado pelo Instituto Federal do Piauí - Campus Corrente, que tem como objetivo principal promover a integração entre estudantes, professores e profissionais da área de informática.
                             </Typography>
                             <Box
-                            sx={{ display: 'flex', gap: '2rem' }}>
+                            sx={{ display: 'flex', gap: '2rem', flexWrap:'wrap' , justifyContent:'center', marginBottom:'20px' }}>
                                 <Button
                                 href='https://suap.ifpi.edu.br/eventos/inscricao/1522/'
                                 sx={{
+                                    width: '150px',
                                     backgroundColor: '#F5167E',
                                     padding: '10px 20px',
                                     borderRadius: '20px',
@@ -43,6 +44,7 @@ const Header = () => {
                                 <Button
                                     onClick={OnTimeline}
                                 sx={{
+                                    width: '150px',
                                     backgroundColor: '#F5167E',
                                     padding: '10px 20px',
                                     borderRadius: '20px',
@@ -55,6 +57,8 @@ const Header = () => {
                                 <Button
                                 href='https://drive.google.com/drive/folders/11Sl14hHgQtl3MtC54qgIGpoyiz-nvDsb?usp=sharing'
                                 sx={{
+                                    width: '150px',
+
                                     backgroundColor: '#F5167E',
                                     padding: '10px 20px',
                                     borderRadius: '20px',
