@@ -52,11 +52,10 @@ const ChallengeSection = () => {
                         Que tal um desafio?
                     </Typography>
                     <Typography variant="body1" gutterBottom sx={{ color: "#fff", fontSize: '1.4rem' }}>
-                        Gosta de desenvolver soluções?
-                        <br />
-                        Venha participar do nosso HACKATHON!
+                        Se inscreva em uma de nossas competições e mostre suas habilidades!
                     </Typography>
                     <Button
+                        href='https://forms.gle/Rr2xbkFDBcFpPpvNA'
                         variant="contained"
                         color="secondary"
                         size="large"
