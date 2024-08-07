@@ -84,7 +84,7 @@ export const Footer = () => {
               <Typography>O Simpósio de Informática de Corrente Piauí é um evento que promove o conhecimento e a inovação tecnológica, oferecendo minicursos, palestras e atividades práticas. É a oportunidade perfeita para se conectar com outros entusiastas, aprender novas habilidades e explorar as tendências emergentes da informática.</Typography>
             </Box>
             <Box sx={{  flex: 1 }}/>
-            <Box sx={{  textAlign: 'center', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', display: 'flex', }}>
+            <Box sx={{  textAlign: 'center', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', display: 'flex', rowGap: '0.5rem' }}>
               <img src={QRCode} alt='QR Code' style={{ maxWidth: '200px', height: 'auto' }} />
               <Typography>Escaneie o QR Code para acessar o site</Typography>
               <Button href='https://linktr.ee/sinfcor' sx={{
