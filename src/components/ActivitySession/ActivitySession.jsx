@@ -62,9 +62,19 @@ const ActivitySession = () => {
                     variant="contained" 
                     color="primary" 
                     onClick={handleLoadMore} 
-                    sx={{ marginTop: '2rem' }}
-                >
-                    Mais
+                    sx={{
+                        width: '20%',
+                        minWidth: '200px',
+                        whiteSpace: "nowrap",
+                        backgroundColor: '#F5167E',
+                        marginTop: '2rem',
+                        padding: '10px 20px',
+                        borderRadius: '20px',
+                        '&:hover': {
+                            backgroundColor: '#F5167Ec1',
+                        }
+                    }}                >
+                    Ver Mais
                 </Button>
             )}
             {selectedActivity && (

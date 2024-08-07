@@ -5,6 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import PropTypes from 'prop-types';
+import bgImage from '../../assets/rear-view-programmer-working-all-night-long.jpg';
 
 const ActivityCard = ({ title, description, image, date, hora, onClick }) => {
   return (
@@ -13,7 +14,7 @@ const ActivityCard = ({ title, description, image, date, hora, onClick }) => {
         <CardMedia
           component="img"
           height="200"
-          image={image}
+          image={bgImage}
           alt={title}
         />
         <CardContent>

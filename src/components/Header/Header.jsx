@@ -1,9 +1,15 @@
 import { Button, Container, Typography, Grid, Box } from '@mui/material';
 import LogoSinfcor from '../../assets/logo-monobranco-header.png'
 import ParticlesComponent from '../ParticlesComponent/ParticlesComponent';
+import Timeline from '../../assets/timeline/cronogramaoficial.pdf';
 
 
 const Header = () => {
+ 
+    const OnTimeline = () => {
+        window.open(Timeline)
+    } 
+
     return (
         <Box component="header" sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', marginBottom: '15px' }}>
             <ParticlesComponent id="particles" />
@@ -20,26 +26,45 @@ const Header = () => {
                             <Typography variant="h5" component="h2" gutterBottom sx={{ textAlign: 'center', color: '#FFFFFF'}}>
                                 O SINFCOR é um evento organizado pelo Instituto Federal do Piauí - Campus Corrente, que tem como objetivo principal promover a integração entre estudantes, professores e profissionais da área de informática.
                             </Typography>
-                            <Box sx={{ display: 'flex', gap: '2rem' }}>
-                                <Button sx={{
+                            <Box
+                            sx={{ display: 'flex', gap: '2rem' }}>
+                                <Button
+                                href='https://suap.ifpi.edu.br/eventos/inscricao/1522/'
+                                sx={{
                                     backgroundColor: '#F5167E',
                                     padding: '10px 20px',
                                     borderRadius: '20px',
                                     '&:hover': {
                                         backgroundColor: '#F5167Ec1',
                                     }
-                                }} variant="contained" color="primary">Cadastro</Button>
+                                }} variant="contained" color="primary">Cadastro
+                                
+                                </Button>
                                 <Button
-                                    sx={{
-                                        padding: '10px 20px',
-                                        borderRadius: '20px',
-                                        borderColor: '#F5167E',
-                                        color: '#F5167E',
-                                        '&:hover': {
-                                            backgroundColor: '#F5167E1f',
-                                        }
-                                    }}
-                                    variant="outlined" color="primary">Saiba mais</Button>
+                                    onClick={OnTimeline}
+                                sx={{
+                                    backgroundColor: '#F5167E',
+                                    padding: '10px 20px',
+                                    borderRadius: '20px',
+                                    '&:hover': {
+                                        backgroundColor: '#F5167Ec1',
+                                    }
+                                }} variant="contained" color="primary">
+                                    Cronograma 
+                                </Button>
+                                <Button
+                                href='https://drive.google.com/drive/folders/11Sl14hHgQtl3MtC54qgIGpoyiz-nvDsb?usp=sharing'
+                                sx={{
+                                    backgroundColor: '#F5167E',
+                                    padding: '10px 20px',
+                                    borderRadius: '20px',
+                                    '&:hover': {
+                                        backgroundColor: '#F5167Ec1',
+                                    }
+                                }} variant="contained" color="primary"> Submissão
+                                
+                                </Button>
+                               
                             </Box>
                         </Container>
                     </Grid>
