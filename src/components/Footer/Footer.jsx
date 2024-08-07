@@ -1,8 +1,9 @@
 import React from 'react';
 import IconInstagram from '../../assets/icons/instagram.svg';
-import QRCode from '../../assets/images/qrcode.png';
-import { Box, Container, Typography } from '@mui/material';
+import QRCode from '../../assets/images/qrcode.jpeg';
+import { Box, Container, Typography, Button } from '@mui/material';
 import styled, { keyframes } from 'styled-components';
+
 
 // Animação de onda
 const waveAnimation = keyframes`
@@ -67,11 +68,13 @@ export const Footer = () => {
       </FooterWaveContainer>
       <FooterContainer>
         <Container maxWidth="xl" sx={{ display: 'flex', flexDirection: 'column', height: '100%', color: 'white' }}>
-          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexGrow: 1, gap: 2, flexDirection:{
-            xs: 'column',
-            md: 'row'
-          } }}>
-            <Box sx={{ textAlign: 'left', flex: 1, marginRight: '2rem' }}>
+          <Box sx={{
+            display: 'flex', justifyContent: 'center', alignItems: 'center', flexGrow: 1, gap: 2, flexDirection: {
+              xs: 'column',
+              md: 'row'
+            }
+          }}>
+            <Box sx={{ textAlign: 'left', flex: 2, marginRight: '2rem' }}>
               <Typography sx={{
                 fontFamily: "Montserrat",
                 fontSize: '2.5rem',
@@ -80,14 +83,21 @@ export const Footer = () => {
               }}>SINFCOR - IFPI</Typography>
               <Typography>O Simpósio de Informática de Corrente Piauí é um evento que promove o conhecimento e a inovação tecnológica, oferecendo minicursos, palestras e atividades práticas. É a oportunidade perfeita para se conectar com outros entusiastas, aprender novas habilidades e explorar as tendências emergentes da informática.</Typography>
             </Box>
-            <Box sx={{ flex: 1, textAlign: 'right' }}>
+            <Box sx={{  flex: 1 }}/>
+            <Box sx={{  textAlign: 'center', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', display: 'flex', }}>
               <img src={QRCode} alt='QR Code' style={{ maxWidth: '200px', height: 'auto' }} />
+              <Typography>Escaneie o QR Code para acessar o site</Typography>
+              <Button href='https://linktr.ee/sinfcor' sx={{
+                backgroundColor: '#F5167E',
+                color: 'white',
+              }}>Acessar site</Button>
             </Box>
           </Box>
-          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '2rem', columnGap: '1rem' }}>
+          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '2rem', columnGap: '1rem', flexDirection: 'column' }}>
             <a href='https://www.facebook.com/'>
               <img src={IconInstagram} alt='Facebook' />
             </a>
+            <Typography>Siga-nos nas redes sociais</Typography>
           </Box>
           <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '1rem' }}>
             <Typography>&copy; 2024 SINFCOR. Todos os direitos reservados.</Typography>
