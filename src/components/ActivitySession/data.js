@@ -10,7 +10,7 @@ const activities = [
         hora: '10h-12h',
         location: 'IFPI - Corrente Campus Auditorium',
         speakers: ['Ana Francisa', 'Clara Cunha','Ester Lago','Leticia Gonçalves'],
-        registration: 'https://registration-link'
+        registration: 'https://suap.ifpi.edu.br/eventos/inscricao/1522/'
     },
     {
         id: 2,
@@ -21,7 +21,7 @@ const activities = [
         hora: '10h-12h',
         location: 'IFPI - Corrente Campus Auditorium',
         speakers: ['Eduardo dos Santos Lustosa', 'Henrique Castro do Nascimento','Tiago de Souza Mouta','Thaemilly Souza Seriqueira'],
-        registration: 'https://registration-link'
+        registration: 'https://suap.ifpi.edu.br/eventos/inscricao/1522/'
     },
     {
         id: 3,
@@ -32,7 +32,7 @@ const activities = [
         hora: '16h-18h',
         location: 'IFPI - Corrente Campus Auditorium',
         speakers: ['Guilherme Santo Costa', 'Pedro Henrique Vogado Maia','Luiara Vieira'],
-        registration: 'https://registration-link'
+        registration: 'https://suap.ifpi.edu.br/eventos/inscricao/1522/'
     },
     {
         id: 4,
@@ -43,7 +43,7 @@ const activities = [
         hora: '10h-12h',
         location: 'IFPI - Corrente Campus Auditorium',
         speakers: ['Prof. Felipe Gonçalves'],
-        registration: 'https://registration-link'
+        registration: 'https://suap.ifpi.edu.br/eventos/inscricao/1522/'
     },
     {
         id: 5,
@@ -54,7 +54,7 @@ const activities = [
         hora: '18h-19h',
         location: 'IFPI - Corrente Campus Auditorium',
         speakers: ['Claudemiro Barbosa Nogueira Bispo','Ana Vitoria Dias Carvalho','Heitor Garcez Martins Louzeiro','Felipe Lustosa Carvalho'],
-        registration: 'https://registration-link'
+        registration: 'https://suap.ifpi.edu.br/eventos/inscricao/1522/'
     },
     {
         id: 6,
@@ -65,7 +65,7 @@ const activities = [
         hora: '18h-19h',
         location: 'IFPI - Corrente Campus Auditorium',
         speakers: ['Daniel de Oliveira Cunha','Carlos Omar Barros Jagnow','Jhenik Teixeira de Brito','Gustavo Moreira Cruz'],
-        registration: 'https://registration-link'
+        registration: 'https://suap.ifpi.edu.br/eventos/inscricao/1522/'
     },
     {
         id: 7,
@@ -76,7 +76,7 @@ const activities = [
         hora: '18h-19h',
         location: 'IFPI - Corrente Campus Auditorium',
         speakers: ['Jhonatas Gomes Ribeiro'],
-        registration: 'https://registration-link'
+        registration: 'https://suap.ifpi.edu.br/eventos/inscricao/1522/'
     },
     {
         id: 8,
@@ -87,7 +87,7 @@ const activities = [
         hora: '8h-9h',
         location: 'IFPI - Corrente Campus Auditorium',
         speakers: ['Ana Raquel Martins Carvalho','Jean Carlos Paiva Araújo','Livya Cunha da Luz','Maria Hellena Gomes Damasceno','Nádia Evellyn Pinheiro de Freitas Louzeiro'],
-        registration: 'https://registration-link'
+        registration: 'https://suap.ifpi.edu.br/eventos/inscricao/1522/'
     },
     {
         id: 9,
@@ -98,7 +98,7 @@ const activities = [
         hora: '10h-11h',
         location: 'IFPI - Corrente Campus Auditorium',
         speakers: ['Prof. Israel'],
-        registration: 'https://registration-link'
+        registration: 'https://suap.ifpi.edu.br/eventos/inscricao/1522/'
     },
     {
         id: 10,
@@ -109,7 +109,7 @@ const activities = [
         hora: '10h-11h',
         location: 'IFPI - Corrente Campus Auditorium',
         speakers: ['Rafael Batista (licen.matemática)'],
-        registration: 'https://registration-link'
+        registration: 'https://suap.ifpi.edu.br/eventos/inscricao/1522/'
     }
 
 ];
