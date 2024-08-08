@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
-import { Box, Button, Container, Drawer, IconButton, Toolbar, List, ListItem, ListItemText, useMediaQuery, useTheme } from "@mui/material";
+import React, { useState, useEffect } from "react";
+import { Box, Button, Container, Drawer, IconButton, Toolbar, List, ListItemButton, ListItemText, useMediaQuery, useTheme } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import LogoIF from '../../assets/Logo-IFPI.png';
-import LogoSinfcor from '../../assets/logo-monobranco.png'
-import LogoSinfcor2 from '../../assets/logo-gradientBgTransp.png'
+import LogoSinfcor from '../../assets/logo-monobranco.png';
+import LogoSinfcor2 from '../../assets/logo-gradientBgTransp.png';
 
-const Navbar = () => {
+const Navbar = ({ homeRef, noticiasRef, atividadesRef }) => {
     const [scrolled, setScrolled] = useState(false);
     const [drawerOpen, setDrawerOpen] = useState(false);
     const theme = useTheme();
@@ -31,13 +31,22 @@ const Navbar = () => {
         setDrawerOpen(open);
     };
 
+    const scrollToSection = (ref) => {
+        ref.current?.scrollIntoView({ behavior: 'smooth' });
+        setDrawerOpen(false);  // Fechar o Drawer após a seleção de um item no menu móvel
+    };
+
     const menuItems = (
         <List>
-            {['Home', 'Noticias', 'Atividades'].map((text) => (
-                <ListItem key={text}>
-                    <ListItemText primary={text} />
-                </ListItem>
-            ))}
+            <ListItemButton onClick={() => scrollToSection(homeRef)}>
+                <ListItemText primary="Home" />
+            </ListItemButton>
+            <ListItemButton onClick={() => scrollToSection(noticiasRef)}>
+                <ListItemText primary="Noticias" />
+            </ListItemButton>
+            <ListItemButton onClick={() => scrollToSection(atividadesRef)}>
+                <ListItemText primary="Atividades" />
+            </ListItemButton>
         </List>
     );
 
@@ -58,27 +67,19 @@ const Navbar = () => {
                 <img src={LogoIF} width={200} alt="Logo IFPI" />
                 <Box sx={{ flexGrow: 2 }} />
                 <Box sx={{ display: { xs: 'none', md: 'flex' }, flexGrow: 1, justifyContent: 'center' }}>
-                    <ul style={{ display: 'flex', listStyle: 'none', gap: '1rem', color: scrolled ? '#000' : '#fff',  }}>
+                    <ul style={{ display: 'flex', listStyle: 'none', gap: '1rem', color: scrolled ? '#000' : '#fff', }}>
                         <li>
-                            <Button color="inherit">Home</Button>
+                            <Button color="inherit" onClick={() => scrollToSection(homeRef)}>Home</Button>
                         </li>
                         <li>
-                            <Button color="inherit">Noticias</Button>
+                            <Button color="inherit" onClick={() => scrollToSection(noticiasRef)}>Noticias</Button>
                         </li>
                         <li>
-                            <Button color="inherit">Atividades</Button>
+                            <Button color="inherit" onClick={() => scrollToSection(atividadesRef)}>Atividades</Button>
                         </li>
                     </ul>
                 </Box>
-                {/* <Typography variant="h6" component="div" sx={{
-                    display: { xs: 'none', md: 'block' },
-                    fontWeight: 'bold',
-                    color: '#ffffff',
-                    fontSize: '1.5rem',
-                }}>
-                    SINFCOR
-                </Typography> */}
-                <img width={200} src={scrolled ?  LogoSinfcor2 : LogoSinfcor} style={{
+                <img width={200} src={scrolled ? LogoSinfcor2 : LogoSinfcor} style={{
                     display: isMobile ? 'none' : 'block'
                 }} alt='logo' />
                 <IconButton

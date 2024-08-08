@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { SpeedInsights } from "@vercel/speed-insights/react"
-
+import React, { useState, useEffect, useRef } from 'react';
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Container } from "@mui/material";
 import { Footer } from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
@@ -17,6 +16,10 @@ import HackathonSection from "./components/HackathonSection/HackathonSection";
 function App() {
   const [targetDate, setTargetDate] = useState(new Date("2024-08-16T08:00:00"));
   const [isTimerOver, setIsTimerOver] = useState(false);
+
+  const homeRef = useRef(null);
+  const noticiasRef = useRef(null);
+  const atividadesRef = useRef(null);
 
   const updateTargetDate = () => {
     const newTargetDate = new Date(Date.now() + 36 * 60 * 60 * 1000);
@@ -42,19 +45,24 @@ function App() {
   return (
     <>
       <SpeedInsights />
-      <Navbar />
+      <Navbar homeRef={homeRef} noticiasRef={noticiasRef} atividadesRef={atividadesRef} />
       <Header />
       <Container maxWidth="lg" sx={{ marginBottom: '1rem' }}>
         <StopWatch targetDate={targetDate} isTimerOver={isTimerOver} />
       </Container>
-      <AboutsSession />
-      <ActivitySession />
+      <div ref={homeRef}>
+        <AboutsSession />
+      </div>
+      <div ref={atividadesRef}>
+        <ActivitySession />
+      </div>
       <ChallengeSection />
       <HackathonSection />
       <SupportersSection />
-      {/* <PartnersSection /> */}
       <UpdateSession />
-      <IndividualIntervalsExample />
+      <div ref={noticiasRef}>
+        <IndividualIntervalsExample />
+      </div>
       <Footer />
     </>
   );
