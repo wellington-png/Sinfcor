@@ -7,6 +7,9 @@ import Img1 from '../../assets/imagensAct/introduçãoHtmlcss.png';
 import Img3 from '../../assets/imagensAct/IntroduçãoPy.jpg';
 import Img4 from '../../assets/imagensAct/Latex.jpg';
 import Img5 from '../../assets/imagensAct/Power-Bi.jpg';
+import Img10 from '../../assets/imagensAct/JQZUEKSEGBE5VJAWAZTKAWDEIY.jpg';
+import Img11 from '../../assets/imagensAct/LeiGeral.webp';
+import Img12 from '../../assets/imagensAct/desInfo.jpg';
 
 
 const activities = [
@@ -109,7 +112,48 @@ const activities = [
         location: 'IFPI - Corrente Campus Auditorium',
         speakers: ['Rafael Batista (licen.matemática)'],
         registration: 'https://suap.ifpi.edu.br/eventos/inscricao/1522/'
-    }
+    },
+
+    {
+        id: 10,
+        title: 'Lei Geral de Proteção de Dados',
+        description: '',
+        image: Img11,
+        date: '16/08/2024',
+        hora: '20h-21h',
+        location: 'IFPI - Corrente Campus Auditorium',
+        speakers: ['Dr. William Rufo'],
+        registration: 'https://suap.ifpi.edu.br/eventos/inscricao/1522/'
+    },
+
+    {
+        id: 11,
+        title: 'Do Instituto Federal ao mercado Internacional, caminhos para um engenheiro de software',
+        description: '',
+        image: Img10,
+        date: '16/08/2024',
+        hora: '21h-22h',
+        location: 'IFPI - Corrente Campus Auditorium',
+        speakers: ['Gabriel Nogueira Leite'],
+        registration: 'https://suap.ifpi.edu.br/eventos/inscricao/1522/'
+    },
+
+    {
+        id: 12,
+        title: 'Tecnologia, (des)informação e produção social do ódio',
+        description: '',
+        image: Img12,
+        date: '17/08/2024',
+        hora: '09h-10h',
+        location: 'IFPI - Corrente Campus Auditorium',
+        speakers: ['prof. Pedro de Oliveira Júnior'],
+        registration: 'https://suap.ifpi.edu.br/eventos/inscricao/1522/'
+    },
+
+   
+
+  
+
 
 ];
 
