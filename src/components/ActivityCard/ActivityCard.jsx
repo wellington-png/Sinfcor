@@ -1,11 +1,10 @@
-import * as React from 'react';
+import { CardActionArea } from '@mui/material';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
 import PropTypes from 'prop-types';
-import bgImage from '../../assets/rear-view-programmer-working-all-night-long.jpg';
+import * as React from 'react';
 
 const ActivityCard = ({ title, description, image, date, hora, onClick }) => {
   return (
@@ -14,7 +13,7 @@ const ActivityCard = ({ title, description, image, date, hora, onClick }) => {
         <CardMedia
           component="img"
           height="200"
-          image={bgImage}
+          image={image}
           alt={title}
         />
         <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: 'calc(100% - 200px)' }}>

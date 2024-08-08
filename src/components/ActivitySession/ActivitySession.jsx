@@ -10,45 +10,49 @@ const ActivitySession = () => {
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const [selectedActivity, setSelectedActivity] = useState(null);
     const [modalOpen, setModalOpen] = useState(false);
-    const [visibleCount, setVisibleCount] = useState(6); 
+    const [visibleCount, setVisibleCount] = useState(6);
+    const [showingAll, setShowingAll] = useState(false);
 
     const handleCardClick = (activity) => {
         setSelectedActivity(activity);
         setModalOpen(true);
     };
-
     const handleCloseModal = () => {
         setModalOpen(false);
         setSelectedActivity(null);
     };
-
-    const handleLoadMore = () => {
-        setVisibleCount(prevCount => prevCount + 6); 
+    const handleLoadMoreOrLess = () => {
+        if (showingAll) {
+            setVisibleCount(6);
+        } else {
+            setVisibleCount(activities.length);
+        }
+        setShowingAll(!showingAll);
     };
 
     return (
         <SectionContainer title='Atividades'>
-            <Grid 
-                container 
-                spacing={5} 
-                justifyContent={isMobile ? "center" : "flex-start"} 
-                alignItems="center" 
+            <Grid
+                container
+                spacing={5}
+                justifyContent={isMobile ? "center" : "flex-start"}
+                alignItems="center"
                 sx={{ marginTop: '2rem', padding: '0 1rem' }}
             >
                 {activities.slice(0, visibleCount).map(activity => (
-                    <Grid 
-                        item 
-                        xs={12} 
-                        sm={6} 
-                        md={4} 
-                        lg={4} 
-                        key={activity.id} 
-                        display="flex" 
+                    <Grid
+                        item
+                        xs={12}
+                        sm={6}
+                        md={4}
+                        lg={4}
+                        key={activity.id}
+                        display="flex"
                         justifyContent="center"
                     >
-                        <ActivityCard 
-                            title={activity.title} 
-                            description={activity.description} 
+                        <ActivityCard
+                            title={activity.title}
+                            description={activity.description}
                             image={activity.image}
                             date={activity.date}
                             hora={activity.hora}
@@ -57,11 +61,11 @@ const ActivitySession = () => {
                     </Grid>
                 ))}
             </Grid>
-            {activities.length > visibleCount && (
-                <Button 
-                    variant="contained" 
-                    color="primary" 
-                    onClick={handleLoadMore} 
+            {activities.length > 6 && (
+                <Button
+                    variant="contained"
+                    color="primary"
+                    onClick={handleLoadMoreOrLess}
                     sx={{
                         width: '20%',
                         minWidth: '200px',
@@ -73,14 +77,15 @@ const ActivitySession = () => {
                         '&:hover': {
                             backgroundColor: '#F5167Ec1',
                         }
-                    }}                >
-                    Ver Mais
+                    }}
+                >
+                    {showingAll ? 'Ver Menos' : 'Ver Mais'}
                 </Button>
             )}
             {selectedActivity && (
-                <ActivityModal 
-                    open={modalOpen} 
-                    onClose={handleCloseModal} 
+                <ActivityModal
+                    open={modalOpen}
+                    onClose={handleCloseModal}
                     activity={selectedActivity}
                 />
             )}
