@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Box, Button, Container, Drawer, IconButton, Toolbar, List, ListItemButton, ListItemText, useMediaQuery, useTheme } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link as ScrollLink } from 'react-scroll';  
 import LogoIF from '../../assets/Logo-IFPI.png';
 import LogoSinfcor from '../../assets/logo-monobranco.png';
 import LogoSinfcor2 from '../../assets/logo-gradientBgTransp.png';
@@ -19,7 +20,6 @@ const Navbar = ({ homeRef, noticiasRef, atividadesRef }) => {
                 setScrolled(false);
             }
         };
-
         window.addEventListener('scroll', handleScroll);
 
         return () => {
@@ -30,22 +30,22 @@ const Navbar = ({ homeRef, noticiasRef, atividadesRef }) => {
     const toggleDrawer = (open) => () => {
         setDrawerOpen(open);
     };
-
-    const scrollToSection = (ref) => {
-        ref.current?.scrollIntoView({ behavior: 'smooth' });
-        setDrawerOpen(false);  // Fechar o Drawer após a seleção de um item no menu móvel
-    };
-
     const menuItems = (
         <List>
-            <ListItemButton onClick={() => scrollToSection(homeRef)}>
-                <ListItemText primary="Home" />
+            <ListItemButton onClick={toggleDrawer(false)}>
+                <ScrollLink to="home" smooth={true} duration={800}>
+                    <ListItemText primary="Home" />
+                </ScrollLink>
             </ListItemButton>
-            <ListItemButton onClick={() => scrollToSection(noticiasRef)}>
-                <ListItemText primary="Noticias" />
+            <ListItemButton onClick={toggleDrawer(false)}>
+                <ScrollLink to="noticias" smooth={true} duration={800}>
+                    <ListItemText primary="Noticias" />
+                </ScrollLink>
             </ListItemButton>
-            <ListItemButton onClick={() => scrollToSection(atividadesRef)}>
-                <ListItemText primary="Atividades" />
+            <ListItemButton onClick={toggleDrawer(false)}>
+                <ScrollLink to="atividades" smooth={true} duration={800}>
+                    <ListItemText primary="Atividades" />
+                </ScrollLink>
             </ListItemButton>
         </List>
     );
@@ -69,13 +69,19 @@ const Navbar = ({ homeRef, noticiasRef, atividadesRef }) => {
                 <Box sx={{ display: { xs: 'none', md: 'flex' }, flexGrow: 1, justifyContent: 'center' }}>
                     <ul style={{ display: 'flex', listStyle: 'none', gap: '1rem', color: scrolled ? '#000' : '#fff', }}>
                         <li>
-                            <Button color="inherit" onClick={() => scrollToSection(homeRef)}>Home</Button>
+                            <ScrollLink to="home" smooth={true} duration={800} offset={-70}>
+                                <Button color="inherit">Home</Button>
+                            </ScrollLink>
                         </li>
                         <li>
-                            <Button color="inherit" onClick={() => scrollToSection(noticiasRef)}>Noticias</Button>
+                        <ScrollLink to="atividades" smooth={true} duration={800} offset={-70}>
+                                <Button color="inherit">Atividades</Button>
+                            </ScrollLink>  
                         </li>
                         <li>
-                            <Button color="inherit" onClick={() => scrollToSection(atividadesRef)}>Atividades</Button>
+                            <ScrollLink to="noticias" smooth={true} duration={800} offset={-70}>
+                                <Button color="inherit">Noticias</Button>
+                            </ScrollLink>
                         </li>
                     </ul>
                 </Box>

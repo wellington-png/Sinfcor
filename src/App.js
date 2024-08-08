@@ -16,11 +16,9 @@ import HackathonSection from "./components/HackathonSection/HackathonSection";
 function App() {
   const [targetDate, setTargetDate] = useState(new Date("2024-08-16T08:00:00"));
   const [isTimerOver, setIsTimerOver] = useState(false);
-
   const homeRef = useRef(null);
   const noticiasRef = useRef(null);
   const atividadesRef = useRef(null);
-
   const updateTargetDate = () => {
     const newTargetDate = new Date(Date.now() + 36 * 60 * 60 * 1000);
     setTargetDate(newTargetDate);
@@ -46,21 +44,21 @@ function App() {
     <>
       <SpeedInsights />
       <Navbar homeRef={homeRef} noticiasRef={noticiasRef} atividadesRef={atividadesRef} />
-      <div ref={homeRef}>
+      <div id='home'>
         <Header />
       </div>
       <Container maxWidth="lg" sx={{ marginBottom: '1rem' }}>
         <StopWatch targetDate={targetDate} isTimerOver={isTimerOver} />
       </Container>
       <AboutsSession />
-     <div ref={atividadesRef}>
-      <ActivitySession />
+      <div id='atividades'>
+        <ActivitySession />
       </div>
       <ChallengeSection />
       <HackathonSection />
       <SupportersSection />
       <UpdateSession />
-      <div ref={noticiasRef}>
+      <div id='noticias'>
         <IndividualIntervalsExample />
       </div>
       <Footer />
