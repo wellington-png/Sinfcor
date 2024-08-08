@@ -46,15 +46,15 @@ function App() {
     <>
       <SpeedInsights />
       <Navbar homeRef={homeRef} noticiasRef={noticiasRef} atividadesRef={atividadesRef} />
-      <Header />
+      <div ref={homeRef}>
+        <Header />
+      </div>
       <Container maxWidth="lg" sx={{ marginBottom: '1rem' }}>
         <StopWatch targetDate={targetDate} isTimerOver={isTimerOver} />
       </Container>
-      <div ref={homeRef}>
-        <AboutsSession />
-      </div>
-      <div ref={atividadesRef}>
-        <ActivitySession />
+      <AboutsSession />
+     <div ref={atividadesRef}>
+      <ActivitySession />
       </div>
       <ChallengeSection />
       <HackathonSection />
