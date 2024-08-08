@@ -55,7 +55,7 @@ const Header = () => {
                                     Cronograma 
                                 </Button>
                                 <Button
-                                href='https://drive.google.com/drive/folders/11Sl14hHgQtl3MtC54qgIGpoyiz-nvDsb?usp=sharing'
+                                href='https://suap.ifpi.edu.br/eventos/submissao/1522/submeter_trabalho/1/'
                                 sx={{
                                     width: '150px',
 
