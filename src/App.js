@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { SpeedInsights } from "@vercel/speed-insights/react"
+
 import { Container } from "@mui/material";
 import { Footer } from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
@@ -17,7 +19,7 @@ function App() {
   const [isTimerOver, setIsTimerOver] = useState(false);
 
   const updateTargetDate = () => {
-    const newTargetDate = new Date(Date.now() + 36 * 60 * 60 * 1000); 
+    const newTargetDate = new Date(Date.now() + 36 * 60 * 60 * 1000);
     setTargetDate(newTargetDate);
   };
 
@@ -28,17 +30,18 @@ function App() {
 
       if (timeRemaining <= 0) {
         setIsTimerOver(true);
-        updateTargetDate(); 
+        updateTargetDate();
       } else {
         setIsTimerOver(false);
       }
     }, 1000);
 
-    return () => clearInterval(intervalId); 
+    return () => clearInterval(intervalId);
   }, [targetDate]);
 
   return (
     <>
+      <SpeedInsights />
       <Navbar />
       <Header />
       <Container maxWidth="lg" sx={{ marginBottom: '1rem' }}>
