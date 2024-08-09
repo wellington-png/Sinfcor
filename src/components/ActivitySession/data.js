@@ -23,7 +23,7 @@ const activities = [
         date: '17/08/2024',
         hora: '11h-12h',
         location: 'IFPI - Corrente Campus ',
-        speakers: ['Todos os Participantes que Desejarem no Evento'],
+        speakers: ['Todos os Participantes que Desejarem Participar do Evento'],
         // registration: 'https://suap.ifpi.edu.br/eventos/inscricao/1522/'
     },
     {

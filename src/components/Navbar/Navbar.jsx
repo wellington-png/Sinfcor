@@ -12,6 +12,11 @@ const Navbar = ({ homeRef, noticiasRef, atividadesRef }) => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
+    const handleLink = () => {
+        window.open('https://suap.ifpi.edu.br/eventos/submissao/1522/submeter_trabalho/1/');
+
+    }
+
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 50) {
@@ -46,6 +51,9 @@ const Navbar = ({ homeRef, noticiasRef, atividadesRef }) => {
                 <ScrollLink to="atividades" smooth={true} duration={800}>
                     <ListItemText primary="Atividades" />
                 </ScrollLink>
+            </ListItemButton>
+            <ListItemButton onClick={handleLink}>
+                    <ListItemText primary="Submeter" />
             </ListItemButton>
         </List>
     );
@@ -82,6 +90,10 @@ const Navbar = ({ homeRef, noticiasRef, atividadesRef }) => {
                             <ScrollLink to="noticias" smooth={true} duration={800} offset={-70}>
                                 <Button color="inherit">Noticias</Button>
                             </ScrollLink>
+                        </li>
+
+                        <li>
+                            <Button color="inherit" onClick={handleLink}>Submeter</Button>
                         </li>
                     </ul>
                 </Box>
