@@ -55,6 +55,7 @@ const ActivityModal = ({ open, onClose, activity }) => {
                 >
                     Fechar
                 </Button>
+                {activity.registration ? (
                 <Button
                     href={activity.registration}
                     target="_blank"
@@ -70,8 +71,8 @@ const ActivityModal = ({ open, onClose, activity }) => {
                         }
                     }}
                 >
-                    Inscrição
-                </Button>
+                    Inscrever-se
+                </Button> ) : ''}
             </DialogActions>
         </Dialog>
     );
