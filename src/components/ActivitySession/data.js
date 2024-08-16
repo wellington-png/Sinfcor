@@ -33,7 +33,7 @@ const activities = [
         image: Img1,
         date: '16/08/2024',
         hora: '10h-12h',
-        location: 'IFPI - Corrente Campus Auditorium',
+        location: 'IFPI - Corrente Campus ',
         speakers: ['Ana Francisa', 'Clara Cunha','Ester Lago','Leticia Gonçalves'],
         registration: 'https://suap.ifpi.edu.br/eventos/inscricao/1522/'
     },
@@ -44,7 +44,7 @@ const activities = [
         image: Img2,
         date: '16/08/2024',
         hora: '10h-12h',
-        location: 'IFPI - Corrente Campus Auditorium',
+        location: 'IFPI - Corrente Campus ',
         speakers: ['Eduardo dos Santos Lustosa', 'Henrique Castro do Nascimento','Tiago de Souza Mouta','Thaemilly Souza Seriqueira'],
         registration: 'https://suap.ifpi.edu.br/eventos/inscricao/1522/'
     },
@@ -55,7 +55,7 @@ const activities = [
         image: Img3,
         date: '16/08/2024',
         hora: '16h-18h',
-        location: 'IFPI - Corrente Campus Auditorium',
+        location: 'IFPI - Corrente Campus ',
         speakers: ['Guilherme Santo Costa', 'Pedro Henrique Vogado Maia','Luiara Vieira'],
         registration: 'https://suap.ifpi.edu.br/eventos/inscricao/1522/'
     },
@@ -67,7 +67,7 @@ const activities = [
         image: Img4,
         date: '16/08/2024',
         hora: '18h-19h',
-        location: 'IFPI - Corrente Campus Auditorium',
+        location: 'IFPI - Corrente Campus ',
         speakers: ['Claudemiro Barbosa Nogueira Bispo','Ana Vitoria Dias Carvalho','Heitor Garcez Martins Louzeiro','Felipe Lustosa Carvalho'],
         registration: 'https://suap.ifpi.edu.br/eventos/inscricao/1522/'
     },
@@ -78,7 +78,7 @@ const activities = [
         image: Img5,
         date: '16/08/2024',
         hora: '18h-19h',
-        location: 'IFPI - Corrente Campus Auditorium',
+        location: 'IFPI - Corrente Campus ',
         speakers: ['Daniel de Oliveira Cunha','Carlos Omar Barros Jagnow','Jhenik Teixeira de Brito','Gustavo Moreira Cruz'],
         registration: 'https://suap.ifpi.edu.br/eventos/inscricao/1522/'
     },
@@ -89,7 +89,7 @@ const activities = [
         image: Img6,
         date: '16/08/2024',
         hora: '18h-19h',
-        location: 'IFPI - Corrente Campus Auditorium',
+        location: 'IFPI - Corrente Campus ',
         speakers: ['Jhonatas Gomes Ribeiro'],
         registration: 'https://suap.ifpi.edu.br/eventos/inscricao/1522/'
     },
@@ -100,7 +100,7 @@ const activities = [
         image: Img7,
         date: '17/08/2024',
         hora: '8h-9h',
-        location: 'IFPI - Corrente Campus Auditorium',
+        location: 'IFPI - Corrente Campus ',
         speakers: ['Ana Raquel Martins Carvalho','Jean Carlos Paiva Araújo','Livya Cunha da Luz','Maria Hellena Gomes Damasceno','Nádia Evellyn Pinheiro de Freitas Louzeiro'],
         registration: 'https://suap.ifpi.edu.br/eventos/inscricao/1522/'
     },
@@ -111,7 +111,7 @@ const activities = [
         image: Img8,
         date: '17/08/2024',
         hora: '10h-11h',
-        location: 'IFPI - Corrente Campus Auditorium',
+        location: 'IFPI - Corrente Campus ',
         speakers: ['Prof. Israel'],
         registration: 'https://suap.ifpi.edu.br/eventos/inscricao/1522/'
     },
@@ -122,7 +122,7 @@ const activities = [
         image: Img9,
         date: '17/08/2024',
         hora: '10h-11h',
-        location: 'IFPI - Corrente Campus Auditorium',
+        location: 'IFPI - Corrente Campus ',
         speakers: ['Rafael Batista (licen.matemática)'],
         registration: 'https://suap.ifpi.edu.br/eventos/inscricao/1522/'
     },
@@ -134,7 +134,7 @@ const activities = [
         image: Img11,
         date: '16/08/2024',
         hora: '20h-21h',
-        location: 'IFPI - Corrente Campus Auditorium',
+        location: 'IFPI - Corrente Campus ',
         speakers: ['Dr. William Rufo'],
         registration: 'https://suap.ifpi.edu.br/eventos/inscricao/1522/'
     },
@@ -146,7 +146,7 @@ const activities = [
         image: Img10,
         date: '16/08/2024',
         hora: '21h-22h',
-        location: 'IFPI - Corrente Campus Auditorium',
+        location: 'IFPI - Corrente Campus ',
         speakers: ['Gabriel Nogueira Leite'],
         registration: 'https://suap.ifpi.edu.br/eventos/inscricao/1522/'
     },
@@ -158,7 +158,7 @@ const activities = [
         image: Img12,
         date: '17/08/2024',
         hora: '09h-10h',
-        location: 'IFPI - Corrente Campus Auditorium',
+        location: 'IFPI - Corrente Campus ',
         speakers: ['prof. Pedro de Oliveira Júnior'],
         registration: 'https://suap.ifpi.edu.br/eventos/inscricao/1522/'
     },

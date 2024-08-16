@@ -12,7 +12,7 @@ const activities = [
     description: 'Detailed description of the symposium, including objectives, target audience, and speakers.',
     image: palestraImage,
     date: '15/08/2024',
-    location: 'IFPI - Corrente Campus Auditorium',
+    location: 'IFPI - Corrente Campus ',
     speakers: ['Prof. Dr. João Silva', 'Profa. Dra. Maria Souza'],
     registration: 'https://registration-link',
     modals: [
