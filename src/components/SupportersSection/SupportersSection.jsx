@@ -5,10 +5,12 @@ import { useInView } from 'react-intersection-observer';
 import SectionContainer from '../SectionContainer/SectionContainer';
 import FapepiLogo from '../../assets/logo-fapepi.png';
 import IfpiVerticalLogo from '../../assets/Logo-IFPI-Corrente-Vertical.png';
+import MundoVariedade from '../../assets/sinfcor/mundo_variedades.jpeg';
 
 const supporters = [
     {id: 1, src: FapepiLogo, alt: 'Fapepi' },
     { id: 2, src: IfpiVerticalLogo, alt: 'IFPI' },
+    { id: 3, src: MundoVariedade, alt: 'Mundo Variedades' },
 ];
 
 const SupportersSection = () => {
